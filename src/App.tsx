@@ -2,7 +2,15 @@
 import react from 'react';
 
 // Components
-import { Hero, Nav, OurProcess, WhatWeDo, WhoWeAre } from './components';
+import {
+  Hero,
+  Nav,
+  OurProcess,
+  WhatWeDo,
+  WhoWeAre,
+  ToolsOfTheTrade,
+  ContactUs,
+} from './components';
 
 // Styles
 import './App.scss';
@@ -13,8 +21,10 @@ const App = () => {
       <Nav></Nav>
       <Hero></Hero>
       <OurProcess></OurProcess>
-      <WhatWeDo></WhatWeDo>
-      <WhoWeAre></WhoWeAre>
+      <WhatWeDo />
+      <WhoWeAre />
+      <ToolsOfTheTrade />
+      <ContactUs />
     </div>
   );
 };

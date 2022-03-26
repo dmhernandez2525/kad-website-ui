@@ -8,6 +8,37 @@ import './OurProcess.scss';
 
 const OurProcess = () => {
   // ====================
+  // Variables
+  // ====================
+  const allContent = [
+    {
+      title: 'Discovery',
+      text: 'Understand your business, its goals, and how technology can help you get there',
+    },
+    {
+      title: 'Solutioning',
+      text: 'Create a unique technology solution catered to your business needs',
+    },
+    {
+      title: 'Design',
+      text: 'Bring your strategy and vision to life with powerful design that makes your brand stand out from the crowd',
+    },
+    {
+      title: 'Develop',
+      text: `Our expert developers build
+      your solution in an agile format
+      and ensure it is well-tested`,
+    },
+    {
+      title: 'Deliver',
+      text: 'We deliver your custom product to you and only consider the job finished if you are completely satisfied with the end results',
+    },
+    {
+      title: 'Support',
+      text: 'Even after delivery, our team monitors performance and security to make sure that what we delivered meets our high expectations',
+    },
+  ];
+  // ====================
   // State
   // ====================
 
@@ -18,7 +49,21 @@ const OurProcess = () => {
   // ====================
   // Display Functions
   // ====================
-
+  const displayContent = () => {
+    return allContent.map((content, i) => {
+      const { title, text } = content;
+      return (
+        <div>
+          <div>
+            <img src="" alt="" />
+            <span>{title}</span>
+            <span>{i}</span>
+          </div>
+          <p>{text}</p>
+        </div>
+      );
+    });
+  };
   // ====================
   // Return
   // ====================
@@ -26,6 +71,18 @@ const OurProcess = () => {
   return (
     <div>
       <h2>OurProcess</h2>
+      <div>
+        <div>
+          <img src="" alt="" />
+          <span>Vision Mission Values</span>
+        </div>
+        <p>
+          Throughout the whole process, our team makes sure that we are
+          constantly aligning with your vision, mission, and values through
+          various forms of communication and touchpoints
+        </p>
+      </div>
+      {displayContent()}
     </div>
   );
 };
