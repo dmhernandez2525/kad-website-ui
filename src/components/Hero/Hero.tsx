@@ -23,11 +23,7 @@ const Hero = () => {
   // Return
   // ====================
 
-  return (
-    <div>
-      <h2>Hero</h2>
-    </div>
-  );
+  return <div className="hero"></div>;
 };
 
 export default Hero;

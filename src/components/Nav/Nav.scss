@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 91px;
+  position: fixed;
+  width: 100%;
+  display: block;
+  top: 0;
+  transition: top 0.3s;
+
+  a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  &__main {
+  }
+  &__scroll {
+    a {
+      color: black;
+    }
+    background: white;
+  }
+}

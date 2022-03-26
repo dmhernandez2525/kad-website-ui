@@ -20,9 +20,9 @@ const App = () => {
     <div className="app">
       <Nav></Nav>
       <Hero></Hero>
-      <OurProcess></OurProcess>
-      <WhatWeDo />
       <WhoWeAre />
+      <WhatWeDo />
+      <OurProcess />
       <ToolsOfTheTrade />
       <ContactUs />
     </div>
