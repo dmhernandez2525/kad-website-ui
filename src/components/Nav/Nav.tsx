@@ -3,6 +3,9 @@ import react, { useState } from 'react';
 import classnames from 'classnames';
 // Components
 
+// Images
+import LogoWhite from '../../images/kadLogoWhite.svg';
+import LogoBlack from '../../images/kadLogoBlack.svg';
 // Styles
 import './Nav.scss';
 
@@ -21,8 +24,8 @@ const Nav = () => {
 
   function scrollFunction() {
     if (
-      document.body.scrollTop > 639 ||
-      document.documentElement.scrollTop > 639
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
     ) {
       setBellow(true);
     } else {
@@ -49,7 +52,11 @@ const Nav = () => {
         navbar__scroll: bellow,
       })}
     >
-      <img src="" alt="" />
+      <img
+        className="navbar__logo"
+        src={!bellow ? LogoWhite : LogoBlack}
+        alt="kad logo"
+      />
       <a href="#home">HOME</a>
       <a href="#news">WHO WE ARE</a>
       <a href="#contact">WHAT WE DO</a>
