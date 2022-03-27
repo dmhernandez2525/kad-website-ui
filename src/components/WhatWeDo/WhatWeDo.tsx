@@ -47,10 +47,12 @@ const WhatWeDo = () => {
     return allContent.map((contentObj) => {
       const { icon, header, text } = contentObj;
       return (
-        <div>
+        <div className="what-we-do__content-wrapper">
           <img src={icon} alt="" />
-          <h3>{header}</h3>
-          <p>{text}</p>
+          <div>
+            <h2>{header}</h2>
+            <p>{text}</p>
+          </div>
         </div>
       );
     });
@@ -62,20 +64,17 @@ const WhatWeDo = () => {
   return (
     <div id="whatwedo" className="what-we-do">
       <h2>What We Do</h2>
-
-      <div>
-        <div>
-          {displayContent()}
-          <p>
-            We are focused on helping your business compete with the biggest
-            brands out there by eliminating the technology advantage they've had
-            for too long. Whether it's the front-end of your business that
-            customers interact with every day or the critical systems that keep
-            it all going, we aim to understand how your business can benefit
-            from upgrading your technology and provide the expertise in making
-            that happen at a fraction of the price.
-          </p>
-        </div>
+      <div className="what-we-do__all-content-wrapper">
+        <div>{displayContent()}</div>
+        <p className="what-we-do__text">
+          We are focused on helping your business compete with the biggest
+          brands out there by eliminating the technology advantage they've had
+          for too long. Whether it's the front-end of your business that
+          customers interact with every day or the critical systems that keep it
+          all going, we aim to understand how your business can benefit from
+          upgrading your technology and provide the expertise in making that
+          happen at a fraction of the price.
+        </p>
       </div>
     </div>
   );
