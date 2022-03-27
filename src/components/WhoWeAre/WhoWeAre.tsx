@@ -83,7 +83,7 @@ const WhoWeAre = () => {
   // ====================
 
   return (
-    <div>
+    <div className="who-we-are">
       <button onClick={() => setToggleType('whoweare')}>Who We Are</button>
       <button onClick={() => setToggleType('ourstory')}>Our Story</button>
 

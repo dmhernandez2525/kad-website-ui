@@ -60,8 +60,8 @@ const ToolsOfTheTrade = () => {
   // ====================
 
   return (
-    <div className="tools-of-the-trade ">
-      <h1>Tools of the Trade</h1>
+    <div className="tools-of-the-trade">
+      <h2>Tools of the Trade</h2>
 
       <p>
         We know there's no such thing as "one size fits all." That's why we are

@@ -1,4 +1,12 @@
 .who-we-are {
+  background: url('../../images/grayBackground.svg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100vw;
+  height: 800px;
   &__info-cards-wrapper {
     display: flex;
   }

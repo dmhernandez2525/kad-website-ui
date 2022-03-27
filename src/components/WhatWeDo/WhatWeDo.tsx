@@ -55,7 +55,7 @@ const WhatWeDo = () => {
   // ====================
 
   return (
-    <div>
+    <div className="what-we-do">
       <h2>What We Do</h2>
 
       <div>

@@ -69,7 +69,7 @@ const OurProcess = () => {
   // ====================
 
   return (
-    <div>
+    <div className="our-process">
       <h2>OurProcess</h2>
       <div>
         <div>

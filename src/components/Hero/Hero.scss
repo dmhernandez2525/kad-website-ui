@@ -7,4 +7,25 @@
 
   width: 100vw;
   height: 730px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__text-top {
+    color: #364655;
+    font-size: 16px;
+  }
+  &__text-bottom {
+    color: #364655;
+    font-size: 16px;
+    width: 224px;
+    text-align: center;
+    margin-top: 6px;
+  }
+  &__heading {
+    color: #ffffff;
+    font-size: 48px;
+  }
 }
