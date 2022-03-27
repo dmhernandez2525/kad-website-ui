@@ -5,9 +5,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  width: 100vw;
-  height: 800px;
+  width: fit-content;
+  height: fit-content;
+  padding: 75px;
   &__info-cards-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0 80px;
+    column-gap: 129px;
+    row-gap: 44px;
   }
 }

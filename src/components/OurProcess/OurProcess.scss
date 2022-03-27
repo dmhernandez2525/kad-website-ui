@@ -5,8 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  width: 100vw;
-  height: 800px;
+  width: fit-content;
+  height: fit-content;
+  padding: 75px;
   &__info-cards-wrapper {
     display: flex;
   }

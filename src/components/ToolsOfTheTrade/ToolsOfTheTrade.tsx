@@ -60,7 +60,7 @@ const ToolsOfTheTrade = () => {
   // ====================
 
   return (
-    <div className="tools-of-the-trade">
+    <div id="toolsofthetrade" className="tools-of-the-trade">
       <h2>Tools of the Trade</h2>
 
       <p>

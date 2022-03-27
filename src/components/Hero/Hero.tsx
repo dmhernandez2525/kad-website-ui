@@ -24,7 +24,7 @@ const Hero = () => {
   // ====================
 
   return (
-    <div className="hero">
+    <div id="home" className="hero">
       <span className="hero__text-top">OUR MISSION</span>
       <span className="hero__heading">EVEN THE TECHNOLOGY PLAYING FIELD</span>
       <span className="hero__text-bottom">

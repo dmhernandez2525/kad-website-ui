@@ -33,7 +33,7 @@ const ContactUs = () => {
   // ====================
 
   return (
-    <div className="contact-us">
+    <div id="contact" className="contact-us">
       <div>
         <div>
           <span>Contact Us</span>

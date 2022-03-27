@@ -4,6 +4,8 @@ import react, { useState } from 'react';
 // Components
 import InfoCard from '../InfoCard';
 
+// Images
+import placeholderImage from '../../images/whoWeAre.svg';
 // Styles
 import './WhoWeAre.scss';
 
@@ -83,28 +85,31 @@ const WhoWeAre = () => {
   // ====================
 
   return (
-    <div className="who-we-are">
+    <div id="whoweare" className="who-we-are">
       <button onClick={() => setToggleType('whoweare')}>Who We Are</button>
       <button onClick={() => setToggleType('ourstory')}>Our Story</button>
 
       {toggleType === 'whoweare' && (
         <>
-          <p>
-            KAD Consulting is a full-stack ERP development and strategy partner
-            for growing brands. We aim to give them access to advanced
-            technology and the expertise to implement it so they can compete
-            with the largest companies out there without fear of having an
-            ecosystem that can't keep up.
-          </p>
+          <div>
+            <p>
+              KAD Consulting is a full-stack ERP development and strategy
+              partner for growing brands. We aim to give them access to advanced
+              technology and the expertise to implement it so they can compete
+              with the largest companies out there without fear of having an
+              ecosystem that can't keep up.
+            </p>
 
-          <span>KAD specializes in:</span>
-          <ul>
-            <li> Full-stack web and mobile experiences</li>
-            <li> Business applications</li>
-            <li> Technical architecture implementation</li>
-            <li> Data collection and aggregation</li>
-            <li> Automation</li>
-          </ul>
+            <span>KAD specializes in:</span>
+            <ul>
+              <li> Full-stack web and mobile experiences</li>
+              <li> Business applications</li>
+              <li> Technical architecture implementation</li>
+              <li> Data collection and aggregation</li>
+              <li> Automation</li>
+            </ul>
+            <img src={placeholderImage} alt="" />
+          </div>
 
           <h1>Our Values</h1>
           <div className="who-we-are__info-cards-wrapper">

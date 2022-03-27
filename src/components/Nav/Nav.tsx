@@ -58,10 +58,13 @@ const Nav = () => {
         alt="kad logo"
       />
       <a href="#home">HOME</a>
-      <a href="#news">WHO WE ARE</a>
-      <a href="#contact">WHAT WE DO</a>
-      <a href="#contact">OUR PROCESS</a>
-      <button>CONTACT US</button>
+      <a href="#whoweare">WHO WE ARE</a>
+      <a href="#whatwedo">WHAT WE DO</a>
+      <a href="#process">OUR PROCESS</a>
+      <a href="#toolsofthetrade">TOOLS OF THE TRADE</a>
+      <button>
+        <a href="#contact"> CONTACT</a>
+      </button>
     </div>
   );
 };
