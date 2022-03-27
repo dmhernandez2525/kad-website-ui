@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200.654" height="163.714" viewBox="0 0 200.654 163.714">
+  <g id="Group_9" data-name="Group 9" transform="translate(-0.875)">
+    <g id="analytics-outline" transform="translate(2 13.857)">
+      <path id="Path_22" data-name="Path 22" d="M24.188,58.92,60.673,13.5" transform="translate(105.159 3.905)" fill="none" stroke="#2a83e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25"/>
+      <path id="Path_23" data-name="Path 23" d="M16.313,15.188l26.532,33.03" transform="translate(66.603 12.632)" fill="none" stroke="#2a83e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25"/>
+      <path id="Path_24" data-name="Path 24" d="M5.625,68.865,48.743,15.187" transform="translate(14.274 9.599)" fill="none" stroke="#2a83e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25"/>
+      <path id="Path_25" data-name="Path 25" d="M50.274,22.254c0,6.837-4.455,12.379-9.947,12.383s-9.949-5.543-9.952-12.383c.132-6.723,4.547-12.088,9.95-12.088s9.818,5.365,9.949,12.088Z" transform="translate(135.45 -10.166)" fill="none" stroke="#2a83e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25"/>
+      <path id="Path_26" data-name="Path 26" d="M40.712,31.817c0,6.843-4.456,12.39-9.952,12.39s-9.947-5.55-9.947-12.39c.131-6.724,4.547-12.089,9.95-12.089s9.818,5.365,9.95,12.089Z" transform="translate(88.635 34.863)" fill="none" stroke="#2a83e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25"/>
+      <path id="Path_27" data-name="Path 27" d="M32.837,23.942c0,6.843-4.456,12.39-9.952,12.39s-9.947-5.55-9.947-12.39c.131-6.723,4.547-12.089,9.95-12.089s9.818,5.365,9.95,12.089Z" transform="translate(50.079 0.529)" fill="none" stroke="#2a83e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25"/>
+      <path id="Path_28" data-name="Path 28" d="M22.149,34.63c0,6.837-4.455,12.379-9.947,12.383S2.253,41.47,2.25,34.63C2.381,27.906,6.8,22.541,12.2,22.541s9.818,5.365,9.95,12.088Z" transform="translate(-2.25 48.112)" fill="none" stroke="#2a83e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25"/>
+    </g>
+    <path id="magnifying-glass" d="M159.476,132.19,131.782,104.5l-21.3-8.8a60.192,60.192,0,1,0-14.53,14.6l8.778,21.243,27.695,27.695a19.129,19.129,0,1,0,27.055-27.05ZM12.055,61.241a49.186,49.186,0,1,1,49.186,49.186A49.241,49.241,0,0,1,12.055,61.241Zm139.692,90.269a8.2,8.2,0,0,1-11.6,0L114,125.355,105.836,105.6l19.757,8.161,26.155,26.155a8.2,8.2,0,0,1,0,11.591Z" transform="translate(36.449 -1.125)" fill="#f7f7f7"/>
+  </g>
+</svg>

@@ -3,6 +3,11 @@ import react from 'react';
 
 // Components
 
+// Images
+import Blocks from './images/blocks.svg';
+import MagnifyingGlass from './images/magnifyingglass.svg';
+import Computer from './images/computer.svg';
+
 // Styles
 import './WhatWeDo.scss';
 
@@ -12,17 +17,17 @@ const WhatWeDo = () => {
   // ====================
   const allContent = [
     {
-      icon: 'ww',
+      icon: MagnifyingGlass,
       header: 'Discovery',
       text: 'Understand your business, its needs and the path to excellence.',
     },
     {
-      icon: 'ww',
+      icon: Blocks,
       header: 'Design and Build',
       text: 'Create a unique, one-of-a-kind solution that solves all your current tech challenges and future-proofs your business for years to come.',
     },
     {
-      icon: 'ww',
+      icon: Computer,
       header: 'Ongoing Support',
       text: 'We ensure that everything we deliver hits the ball out of the park and can be easily developed on by us or others.',
     },
