@@ -13,7 +13,6 @@ import Gitlab from '../../images/PLATFORMS/gitlab.png';
 import AWS from '../../images/PLATFORMS/aws.png';
 import MongoDB from '../../images/PLATFORMS/mongodb.png';
 import TravisCI from '../../images/PLATFORMS/travis.png';
-import SQL from '../../images/PLATFORMS/SQL.png';
 
 // TOOLS & FRAMEWORKS
 import Angular from '../../images/TOOLSFRAMEWORKS/angular.png';
@@ -38,6 +37,7 @@ import Redux from '../../images/TOOLSFRAMEWORKS/redux.png';
 import Rspec from '../../images/TOOLSFRAMEWORKS/Rspec.png';
 import RTL from '../../images/TOOLSFRAMEWORKS/RTL.png';
 import Spring from '../../images/TOOLSFRAMEWORKS/spring.png';
+import SQL from '../../images/TOOLSFRAMEWORKS/SQL.png';
 import Vue from '../../images/TOOLSFRAMEWORKS/vue.png';
 
 // LANGUAGES
@@ -69,7 +69,7 @@ const ToolsOfTheTrade = () => {
   const allSections = [
     {
       sectionTitles: `Platforms`,
-      icons: [AzureDevOps, Github, Gitlab, AWS, MongoDB, TravisCI, SQL],
+      icons: [AzureDevOps, Github, Gitlab, AWS, MongoDB, TravisCI],
     },
     {
       sectionTitles: `Tools & Frameworks`,
@@ -96,6 +96,7 @@ const ToolsOfTheTrade = () => {
         Rspec,
         RTL,
         Spring,
+        SQL,
         Vue,
       ],
     },
