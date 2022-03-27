@@ -149,7 +149,7 @@ const ToolsOfTheTrade = () => {
       return (
         <div className="tools-of-the-trade__icon-wrapper">
           <h3>{sectionTitles}</h3>
-          <Card>
+          <Card className="tools-of-the-trade__card">
             <div>{allIcons}</div>
           </Card>
         </div>
