@@ -5,6 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  text-align: center;
+  color: white;
+
   width: fit-content;
   height: fit-content;
   padding: 75px;
@@ -14,5 +17,28 @@
 
   h2 {
     margin: 0px;
+  }
+
+  &__icon-wrapper {
+    text-align: center;
+  }
+  &__all-icon-wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0 80px;
+    column-gap: 17px;
+  }
+
+  &__platform-icons {
+    width: 120px;
+    height: 120px;
+  }
+  &__toolsandframeworks-icons {
+    width: 70px;
+    height: 70px;
+  }
+  &__languages-icons {
+    width: 100px;
+    height: 100px;
   }
 }
