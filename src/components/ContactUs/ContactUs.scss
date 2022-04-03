@@ -5,11 +5,40 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  width: fit-content;
+  text-align: center;
   height: fit-content;
   padding: 75px;
 
   &__info-cards-wrapper {
     display: flex;
+  }
+
+  &__main-form-wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    p {
+      width: 434px;
+    }
+  }
+
+  &__main-form-contact-us {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 372px;
+    background-color: #364655;
+  }
+
+  &__form-wrapper {
+    height: 250px;
+    width: 1011px;
+    background-color: #364655;
+    margin-left: 8px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
   }
 }

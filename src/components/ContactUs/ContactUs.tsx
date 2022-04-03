@@ -34,17 +34,24 @@ const ContactUs = () => {
 
   return (
     <div id="contact" className="contact-us">
-      <div>
-        <div>
+      <div className="contact-us__main-form-wrapper">
+        <div className="contact-us__main-form-contact-us">
           <span>Contact Us</span>
           <span>KAD Consulting, LLC</span>
-          <input type="email" name="" id="" />
-          <input type="tel" name="" id="" />
+          <a href="tel:217-508-9193" aria-label="call 217-508-9193">
+            217-508-9193
+          </a>
+          <a
+            href="mailto:danher2525@gmail.com"
+            aria-label="send an email to danher2525@gmail.com"
+          >
+            danher2525@gmail.com
+          </a>
         </div>
 
-        <div>
+        <div className="contact-us__form-wrapper">
           <span>Get In Touch</span>
-          <div>
+          <div className="contact-us__form">
             <input
               type="text"
               placeholder="Name"
