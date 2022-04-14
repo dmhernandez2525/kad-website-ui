@@ -52,6 +52,7 @@
 
     h2 {
       text-align: left;
+      margin-top: inherit;
     }
   }
 
@@ -67,6 +68,9 @@
       background: inherit;
       color: white;
       width: 100%;
+      &:focus {
+        outline: none !important;
+      }
       // &::placeholder {
       //   font-size: 16px;
       //   color: white;
@@ -101,10 +105,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    p {
+      font-weight: 900;
+      font-size: x-large;
+    }
   }
 
   &__logo {
     width: 250px;
     margin-right: 16px;
   }
+}
+
+.nameInput {
+  width: 92% !important;
 }

@@ -59,6 +59,7 @@ const ContactUs = () => {
               <div className="contact-us__form-item">
                 <label html-for="Name">Name</label>
                 <input
+                  className="nameInput"
                   type="text"
                   id="Name"
                   value={name}

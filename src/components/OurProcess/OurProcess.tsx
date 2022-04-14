@@ -80,8 +80,9 @@ const OurProcess = () => {
 
   return (
     <div id="process" className="our-process">
+      <h2 className="our-process__header">OurProcess</h2>
       <img src={test} alt="" />
-      {/* <h2>OurProcess</h2>
+      {/* 
       <div>
         <div>
           <img src="" alt="" />
