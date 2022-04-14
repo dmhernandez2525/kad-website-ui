@@ -3,6 +3,9 @@ import react from 'react';
 
 // Components
 
+// Images
+import ProcessCircle from '../../images/processCircle.svg';
+
 // Styles
 import './InfoCard.scss';
 
@@ -42,6 +45,8 @@ const InfoCard = ({
       <p>{mainSection}</p>
 
       <i className={icon}></i>
+
+      {/* <img className="info-card__process-circle" src={ProcessCircle} alt="" /> */}
     </div>
   );
 };

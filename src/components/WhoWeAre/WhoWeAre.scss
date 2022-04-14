@@ -16,6 +16,10 @@
     row-gap: 44px;
   }
 
+  &__button-wrapper {
+    margin-bottom: 64px;
+  }
+
   &__toggled {
     width: 50%;
     font-size: 62px;
@@ -26,5 +30,19 @@
 
   &__not-toggled {
     background: inherit;
+  }
+
+  &__main-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__main {
+    width: 30vw;
+  }
+
+  &__values-wrapper {
+    text-align: center;
+    margin-top: 46px;
   }
 }

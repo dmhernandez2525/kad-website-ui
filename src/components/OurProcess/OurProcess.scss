@@ -5,6 +5,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  // Take out when image is removed
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // Take out when image is removed
+
   height: fit-content;
   padding: 75px;
   &__info-cards-wrapper {
@@ -34,5 +40,9 @@
     position: absolute;
     top: 59px;
     left: 23px;
+  }
+
+  img {
+    width: 80vw;
   }
 }

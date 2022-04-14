@@ -14,8 +14,19 @@
     display: flex;
   }
 
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   h2 {
     margin: 0px;
+  }
+
+  p {
+    width: 50vw;
+    text-align: center;
   }
 
   &__icon-wrapper {
@@ -24,24 +35,31 @@
   &__all-icon-wrapper {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 0 80px;
+    padding: 0 134px;
     column-gap: 17px;
+    height: 100%;
   }
 
   &__platform-icons {
-    width: 120px;
-    height: 120px;
+    width: 30%;
+    margin: 13px;
+    flex-grow: 1;
   }
   &__toolsandframeworks-icons {
-    width: 70px;
-    height: 70px;
+    width: 13%;
+    margin: 16px;
+    flex-grow: 1;
   }
+
   &__languages-icons {
-    width: 100px;
-    height: 100px;
+    width: 24%;
+    margin: 13px;
+    flex-grow: 1;
   }
 
   &__card {
-    height: 500px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }

@@ -12,8 +12,15 @@
     display: flex;
   }
 
+  h1 {
+    margin: 0px;
+    color: white;
+    font-size: 64px;
+    margin-bottom: 48px;
+  }
   h2 {
     margin: 0px;
+    color: white;
   }
 
   &__content-wrapper {
@@ -21,30 +28,31 @@
     color: white;
     text-align: left;
     margin-bottom: 50px;
+    width: 40vw;
 
     p {
-      width: 280px;
       margin-left: 53px;
     }
     h2 {
       margin-left: 53px;
     }
   }
+
   &__all-content-wrapper {
     display: flex;
     img {
-      width: 100px;
+      width: 25%;
     }
+  }
+
+  &__text-wrapper {
   }
 
   &__text {
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     color: white;
     font-size: 22px;
-    line-height: 32px;
-    margin-left: 24px;
+    line-height: 44px;
+    margin-left: 32px;
   }
 }

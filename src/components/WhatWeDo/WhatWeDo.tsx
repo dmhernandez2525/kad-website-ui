@@ -63,18 +63,20 @@ const WhatWeDo = () => {
 
   return (
     <div id="whatwedo" className="what-we-do">
-      <h2>What We Do</h2>
+      <h1>What We Do</h1>
       <div className="what-we-do__all-content-wrapper">
         <div>{displayContent()}</div>
-        <p className="what-we-do__text">
-          We are focused on helping your business compete with the biggest
-          brands out there by eliminating the technology advantage they've had
-          for too long. Whether it's the front-end of your business that
-          customers interact with every day or the critical systems that keep it
-          all going, we aim to understand how your business can benefit from
-          upgrading your technology and provide the expertise in making that
-          happen at a fraction of the price.
-        </p>
+        <div>
+          <p className="what-we-do__text">
+            We are focused on helping your business compete with the biggest
+            brands out there by eliminating the technology advantage they've had
+            for too long. Whether it's the front-end of your business that
+            customers interact with every day or the critical systems that keep
+            it all going, we aim to understand how your business can benefit
+            from upgrading your technology and provide the expertise in making
+            that happen at a fraction of the price.
+          </p>
+        </div>
       </div>
     </div>
   );

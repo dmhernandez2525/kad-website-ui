@@ -6,6 +6,7 @@ import InfoCard from '../InfoCard';
 
 // Images
 import placeholderImage from '../../images/whoWeAre.svg';
+
 // Styles
 import './WhoWeAre.scss';
 import classNames from 'classnames';
@@ -110,29 +111,33 @@ const WhoWeAre = () => {
 
       {toggleType === 'whoweare' && (
         <>
-          <div>
-            <p>
-              KAD Consulting is a full-stack ERP development and strategy
-              partner for growing brands. We aim to give them access to advanced
-              technology and the expertise to implement it so they can compete
-              with the largest companies out there without fear of having an
-              ecosystem that can't keep up.
-            </p>
+          <div className="who-we-are__main-wrapper">
+            <div className="who-we-are__main">
+              <p>
+                KAD Consulting is a full-stack ERP development and strategy
+                partner for growing brands. We aim to give them access to
+                advanced technology and the expertise to implement it so they
+                can compete with the largest companies out there without fear of
+                having an ecosystem that can't keep up.
+              </p>
 
-            <span>KAD specializes in:</span>
-            <ul>
-              <li> Full-stack web and mobile experiences</li>
-              <li> Business applications</li>
-              <li> Technical architecture implementation</li>
-              <li> Data collection and aggregation</li>
-              <li> Automation</li>
-            </ul>
+              <span>KAD specializes in:</span>
+              <ul>
+                <li> Full-stack web and mobile experiences</li>
+                <li> Business applications</li>
+                <li> Technical architecture implementation</li>
+                <li> Data collection and aggregation</li>
+                <li> Automation</li>
+              </ul>
+            </div>
+
             <img src={placeholderImage} alt="" />
           </div>
-
-          <h1>Our Values</h1>
-          <div className="who-we-are__info-cards-wrapper">
-            {displayInfoCards()}
+          <div className="who-we-are__values-wrapper">
+            <h1>Our Values</h1>
+            <div className="who-we-are__info-cards-wrapper">
+              {displayInfoCards()}
+            </div>
           </div>
         </>
       )}

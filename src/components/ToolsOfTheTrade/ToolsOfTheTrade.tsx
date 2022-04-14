@@ -149,9 +149,7 @@ const ToolsOfTheTrade = () => {
       return (
         <div className="tools-of-the-trade__icon-wrapper">
           <h3>{sectionTitles}</h3>
-          <Card className="tools-of-the-trade__card">
-            <div>{allIcons}</div>
-          </Card>
+          <Card className="tools-of-the-trade__card">{allIcons}</Card>
         </div>
       );
     });
@@ -162,14 +160,17 @@ const ToolsOfTheTrade = () => {
 
   return (
     <div id="toolsofthetrade" className="tools-of-the-trade">
-      <h2>Tools of the Trade</h2>
+      <div className="tools-of-the-trade__text-wrapper">
+        <h2>Tools of the Trade</h2>
 
-      <p>
-        We know there's no such thing as "one size fits all." That's why we are
-        always learning the newest technologies. We ensure that your custom
-        solution not only solves your current challenges, but your future ones
-        too.
-      </p>
+        <p>
+          We know there's no such thing as "one size fits all." That's why we
+          are always learning the newest technologies. We ensure that your
+          custom solution not only solves your current challenges, but your
+          future ones too.
+        </p>
+      </div>
+
       <div className="tools-of-the-trade__all-icon-wrapper">
         {displayAllSections()}
       </div>

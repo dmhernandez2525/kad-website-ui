@@ -1,6 +1,9 @@
 // Outside packages
 import react, { useState } from 'react';
 
+// Images
+import Logo from '../../images/kadLogoBlack.svg';
+
 // Styles
 import './ContactUs.scss';
 
@@ -36,57 +39,71 @@ const ContactUs = () => {
     <div id="contact" className="contact-us">
       <div className="contact-us__main-form-wrapper">
         <div className="contact-us__main-form-contact-us">
-          <span>Contact Us</span>
+          <h2>Contact Us</h2>
           <span>KAD Consulting, LLC</span>
           <a href="tel:217-508-9193" aria-label="call 217-508-9193">
-            217-508-9193
+            Phone: 217-508-9193
           </a>
           <a
             href="mailto:danher2525@gmail.com"
             aria-label="send an email to danher2525@gmail.com"
           >
-            danher2525@gmail.com
+            Email: danher2525@gmail.com
           </a>
         </div>
 
         <div className="contact-us__form-wrapper">
-          <span>Get In Touch</span>
+          <h2>Get In Touch</h2>
           <div className="contact-us__form">
             <div className="contact-us__form-item-wrapper">
+              <div className="contact-us__form-item">
+                <label html-for="Name">Name</label>
+                <input
+                  type="text"
+                  id="Name"
+                  value={name}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setName(e.target.value)
+                  }
+                />
+              </div>
+              <div className="contact-us__form-item">
+                <label html-for="Email">Email</label>
+                <input
+                  type="text"
+                  id="Email"
+                  value={email}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setEmail(e.target.value)
+                  }
+                />
+              </div>
+            </div>
+
+            <div className="contact-us__form-item">
+              <label html-for="Subject">Subject</label>
               <input
                 type="text"
-                placeholder="Name"
-                value={name}
+                id="Subject"
+                value={subject}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setName(e.target.value)
-                }
-              />
-              <input
-                type="text"
-                placeholder="Email"
-                value={email}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setEmail(e.target.value)
+                  setSubject(e.target.value)
                 }
               />
             </div>
 
-            <input
-              type="text"
-              placeholder="Subject"
-              value={subject}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setSubject(e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="Message"
-              value={message}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setMessage(e.target.value)
-              }
-            />
+            <div className="contact-us__form-item">
+              <label html-for="Message">Message</label>
+              <input
+                type="text"
+                id="Message"
+                value={message}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setMessage(e.target.value)
+                }
+              />
+            </div>
+
             <div className="contact-us__button-wrapper">
               <button className="contact-us__button">Submit</button>
             </div>
@@ -103,7 +120,8 @@ const ContactUs = () => {
       </div>
 
       <footer>
-        <p>2022</p>
+        <img className="contact-us__logo" src={Logo} alt="kad logo" />
+        <p> &copy; 2022</p>
       </footer>
     </div>
   );
