@@ -3,6 +3,10 @@ import react from 'react';
 
 // Components
 
+// Images
+import ProcessCircle from '../../images/processCircle.svg';
+import test from '../../images/test.png';
+
 // Styles
 import './OurProcess.scss';
 
@@ -53,11 +57,17 @@ const OurProcess = () => {
     return allContent.map((content, i) => {
       const { title, text } = content;
       return (
-        <div>
+        <div className="our-process__content-item-wrapper">
           <div>
-            <img src="" alt="" />
-            <span>{title}</span>
-            <span>{i}</span>
+            <img
+              className="our-process__content-item-process-circle"
+              src={ProcessCircle}
+              alt="process circle"
+            />
+            <div className="our-process__content-item-process-text-wrapper">
+              <span>{title}</span>
+              <span>{i}</span>
+            </div>
           </div>
           <p>{text}</p>
         </div>
@@ -70,7 +80,10 @@ const OurProcess = () => {
 
   return (
     <div id="process" className="our-process">
-      <h2>OurProcess</h2>
+      <div>
+        <img src={test} alt="" />
+      </div>
+      {/* <h2>OurProcess</h2>
       <div>
         <div>
           <img src="" alt="" />
@@ -82,7 +95,9 @@ const OurProcess = () => {
           various forms of communication and touchpoints
         </p>
       </div>
-      {displayContent()}
+      <div className="our-process__content-items-wrapper">
+        {displayContent()}
+      </div> */}
     </div>
   );
 };

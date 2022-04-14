@@ -62,9 +62,9 @@ const Nav = () => {
       <a href="#whatwedo">WHAT WE DO</a>
       <a href="#process">OUR PROCESS</a>
       <a href="#toolsofthetrade">TOOLS OF THE TRADE</a>
-      <button>
-        <a href="#contact"> CONTACT</a>
-      </button>
+      {/* <a href="#contact"> */}
+      <button className="navbar__button">CONTACT</button>
+      {/* </a> */}
     </div>
   );
 };

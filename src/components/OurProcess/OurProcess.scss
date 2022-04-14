@@ -13,4 +13,26 @@
   h2 {
     margin: 0px;
   }
+
+  &__content-item-wrapper {
+    width: 300px;
+    position: relative;
+  }
+
+  &__content-item-process-circle {
+    width: 135px;
+  }
+  s &__content-items-wrapper {
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    column-gap: 5%;
+  }
+
+  &__content-item-process-text-wrapper {
+    width: fit-content;
+    position: absolute;
+    top: 59px;
+    left: 23px;
+  }
 }

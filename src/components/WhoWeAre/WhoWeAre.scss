@@ -15,4 +15,16 @@
     column-gap: 129px;
     row-gap: 44px;
   }
+
+  &__toggled {
+    width: 50%;
+    font-size: 62px;
+    border-radius: 43px;
+    border: none;
+    background: white;
+  }
+
+  &__not-toggled {
+    background: inherit;
+  }
 }

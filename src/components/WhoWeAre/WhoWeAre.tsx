@@ -8,6 +8,7 @@ import InfoCard from '../InfoCard';
 import placeholderImage from '../../images/whoWeAre.svg';
 // Styles
 import './WhoWeAre.scss';
+import classNames from 'classnames';
 
 const WhoWeAre = () => {
   // ====================
@@ -86,8 +87,26 @@ const WhoWeAre = () => {
 
   return (
     <div id="whoweare" className="who-we-are">
-      <button onClick={() => setToggleType('whoweare')}>Who We Are</button>
-      <button onClick={() => setToggleType('ourstory')}>Our Story</button>
+      <div className="who-we-are__button-wrapper">
+        <button
+          className={classNames({
+            'who-we-are__toggled': true,
+            'who-we-are__not-toggled': toggleType !== 'whoweare',
+          })}
+          onClick={() => setToggleType('whoweare')}
+        >
+          Who We Are
+        </button>
+        <button
+          className={classNames({
+            'who-we-are__toggled': true,
+            'who-we-are__not-toggled': toggleType !== 'ourstory',
+          })}
+          onClick={() => setToggleType('ourstory')}
+        >
+          Our Story
+        </button>
+      </div>
 
       {toggleType === 'whoweare' && (
         <>

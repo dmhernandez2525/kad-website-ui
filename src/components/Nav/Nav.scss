@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: transparent;
   height: 91px;
@@ -9,6 +9,13 @@
   top: 0;
   transition: top 0.3s;
 
+  &__button {
+    background: #f7f7f7;
+    border-radius: 27px;
+    color: #2a83e8;
+    font-size: 17px;
+    padding: 8px;
+  }
   a {
     float: left;
     display: block;

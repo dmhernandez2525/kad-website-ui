@@ -52,22 +52,25 @@ const ContactUs = () => {
         <div className="contact-us__form-wrapper">
           <span>Get In Touch</span>
           <div className="contact-us__form">
-            <input
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setName(e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="Email"
-              value={email}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setEmail(e.target.value)
-              }
-            />
+            <div className="contact-us__form-item-wrapper">
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setName(e.target.value)
+                }
+              />
+              <input
+                type="text"
+                placeholder="Email"
+                value={email}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setEmail(e.target.value)
+                }
+              />
+            </div>
+
             <input
               type="text"
               placeholder="Subject"
@@ -84,7 +87,9 @@ const ContactUs = () => {
                 setMessage(e.target.value)
               }
             />
-            <button>Submit</button>
+            <div className="contact-us__button-wrapper">
+              <button className="contact-us__button">Submit</button>
+            </div>
           </div>
         </div>
       </div>
@@ -93,8 +98,13 @@ const ContactUs = () => {
         Take our FREE technology health assessment now to see how you stack up
         against the biggest companies out there.
       </p>
-      <button>Quiz</button>
-      <p>2022</p>
+      <div>
+        <button className="contact-us__button">Quiz</button>
+      </div>
+
+      <footer>
+        <p>2022</p>
+      </footer>
     </div>
   );
 };
