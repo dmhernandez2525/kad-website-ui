@@ -1,6 +1,21 @@
-.App {
+.app {
   text-align: center;
   scroll-behavior: smooth;
+
+  &__not-ready {
+    background: url('./images/grayBackground.svg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Domus;
+    font-size: 32px;
+    padding: 50px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .App-logo {

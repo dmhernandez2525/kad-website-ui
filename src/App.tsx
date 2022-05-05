@@ -11,8 +11,13 @@ import {
   ToolsOfTheTrade,
   ContactUs,
 } from './components';
+
 // Hooks
 import useWindowDimensions from './hooks/useWindowDimensions';
+
+// Images
+import noPhone from './images/noPhone.png';
+
 // Styles
 import './App.scss';
 
@@ -31,7 +36,16 @@ const App = () => {
       </div>
     );
   } else {
-    return <div>Mobile site not ready</div>;
+    return (
+      <div className="app__not-ready">
+        <p>
+          Sorry, we are not ready for you yet. We're working on improving our
+          mobile experience.
+        </p>
+        <p>Please view the website on a larger screen</p>
+        <img src={noPhone} alt="noPhone" />
+      </div>
+    );
   }
 };
 
