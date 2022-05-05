@@ -12,9 +12,16 @@
   padding-right: 0px;
 
   &__reversed {
+    display: flex;
+    justify-content: space-between;
+    padding: 75px;
     padding-left: 0px;
     flex-wrap: wrap-reverse;
+    h1 {
+      text-align: center;
+    }
   }
+
   &__info-cards-wrapper {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -93,5 +100,18 @@
     line-height: 2;
     font-family: Domus;
     font-size: 32px;
+  }
+
+  // Our Story
+  &__ourStoryWrapper {
+    width: 85%;
+  }
+  &__our-founders-image-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+      width: 40%;
+    }
   }
 }

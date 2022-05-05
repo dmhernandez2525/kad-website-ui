@@ -9,6 +9,7 @@
 
   height: fit-content;
   padding: 32px;
+
   &__info-cards-wrapper {
     display: flex;
   }
@@ -22,6 +23,7 @@
   &__text-image-wrapper {
     display: flex;
   }
+
   &__text-image-main-wrapper {
     text-align: center;
     display: flex;
@@ -40,6 +42,7 @@
       text-align: left !important;
     }
   }
+
   &__tools-frameworks {
     text-align: left !important;
     margin-right: 50px;
@@ -47,6 +50,7 @@
       text-align: left !important;
     }
   }
+
   &__platforms {
     text-align: left !important;
     margin-left: 50px;
@@ -83,6 +87,7 @@
     margin: 13px;
     flex-grow: 1;
   }
+
   &__toolsandframeworks-icons {
     width: 13%;
     margin: 16px;
