@@ -85,32 +85,19 @@ const WhoWeAre = () => {
   // ====================
 
   return (
-    <div id="whoweare" className="who-we-are">
-      <div className="who-we-are__button-wrapper">
-        <button
-          className={classNames({
-            'who-we-are__toggled': true,
-            'who-we-are__not-toggled': toggleType !== 'whoweare',
-          })}
-          onClick={() => setToggleType('whoweare')}
-        >
-          Who We Are
-        </button>
-        <button
-          className={classNames({
-            'who-we-are__toggled': true,
-            'who-we-are__not-toggled': toggleType !== 'ourstory',
-          })}
-          onClick={() => setToggleType('ourstory')}
-        >
-          Our Story
-        </button>
-      </div>
-
+    <div
+      id="whoweare"
+      className={classNames({
+        'who-we-are': true,
+        'who-we-are__reversed': toggleType !== 'whoweare',
+      })}
+    >
       {toggleType === 'whoweare' && (
-        <>
+        <div>
           <div className="who-we-are__main-wrapper">
             <div className="who-we-are__main">
+              <h1>Our Business</h1>
+
               <p className="who-we-are__text">
                 KAD Consulting is a full-stack ERP development and strategy
                 partner for growing brands. We aim to give them access to
@@ -119,21 +106,24 @@ const WhoWeAre = () => {
                 having an ecosystem that can't keep up.
               </p>
 
-              <div className="who-we-are__image-icon-wrapper">
-                <div>
-                  <img
-                    className="who-we-are__image-icon"
-                    src={Laptop}
-                    alt="Laptop"
-                  />
-                  <img
-                    className="who-we-are__image-icon"
-                    src={Mobile}
-                    alt="Mobile"
-                  />
+              <div className="who-we-are__all-image-icon-wrapper">
+                <div className="who-we-are__image-icon-wrapper">
+                  <div className="who-we-are__laptop-mobile-image-icon-wrapper">
+                    <img
+                      className="who-we-are__laptop-image-icon"
+                      src={Laptop}
+                      alt="Laptop"
+                    />
+                    <img
+                      className="who-we-are__mobile-image-icon"
+                      src={Mobile}
+                      alt="Mobile"
+                    />
+                  </div>
+
                   <p> Full-stack web and mobile experiences</p>
                 </div>
-                <div>
+                <div className="who-we-are__image-icon-wrapper">
                   <img
                     className="who-we-are__image-icon"
                     src={OfficeBag}
@@ -141,7 +131,7 @@ const WhoWeAre = () => {
                   />
                   <p> Business applications</p>
                 </div>
-                <div>
+                <div className="who-we-are__image-icon-wrapper">
                   <img
                     className="who-we-are__image-icon"
                     src={Hierarchy}
@@ -150,7 +140,7 @@ const WhoWeAre = () => {
                   <p> Technical architecture implementation</p>
                 </div>
 
-                <div>
+                <div className="who-we-are__image-icon-wrapper">
                   <img
                     className="who-we-are__image-icon"
                     src={Graph}
@@ -158,7 +148,7 @@ const WhoWeAre = () => {
                   />
                   <p> Data collection and aggregation</p>
                 </div>
-                <div>
+                <div className="who-we-are__image-icon-wrapper">
                   <img
                     className="who-we-are__image-icon"
                     src={Gear}
@@ -176,10 +166,10 @@ const WhoWeAre = () => {
               {displayInfoCards()}
             </div>
           </div>
-        </>
+        </div>
       )}
       {toggleType === 'ourstory' && (
-        <>
+        <div>
           <p>
             KAD Consulting is made up of brilliant minds that have worked with
             Fortune 500 & 100 technology companies. We all share a common
@@ -202,8 +192,29 @@ const WhoWeAre = () => {
             level the playing field.
           </p>
           <img src="" alt="" />
-        </>
+        </div>
       )}
+
+      <div className="who-we-are__button-wrapper">
+        <button
+          className={classNames({
+            'who-we-are__toggled': true,
+            'who-we-are__not-toggled': toggleType === 'whoweare',
+          })}
+          onClick={() => setToggleType('whoweare')}
+        >
+          {'>'}
+        </button>
+        <button
+          className={classNames({
+            'who-we-are__toggled': true,
+            'who-we-are__not-toggled': toggleType === 'ourstory',
+          })}
+          onClick={() => setToggleType('ourstory')}
+        >
+          {'<'}
+        </button>
+      </div>
     </div>
   );
 };
