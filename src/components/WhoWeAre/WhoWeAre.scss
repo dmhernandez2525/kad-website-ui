@@ -105,6 +105,14 @@
   // Our Story
   &__ourStoryWrapper {
     width: 85%;
+    h1 {
+      font-size: 85px;
+      font-weight: 600;
+    }
+    p {
+      font-family: Domus;
+      font-size: 32px;
+    }
   }
   &__our-founders-image-wrapper {
     display: flex;
