@@ -5,6 +5,9 @@ import classnames from 'classnames';
 import Card from '../Card';
 
 // Images
+import one from '../../images/ToolsofTheTrade/1.png';
+import two from '../../images/ToolsofTheTrade/2.png';
+import three from '../../images/ToolsofTheTrade/3.png';
 
 // PLATFORMS
 import AzureDevOps from '../../images/PLATFORMS/azuredevops.png';
@@ -160,7 +163,7 @@ const ToolsOfTheTrade = () => {
 
   return (
     <div id="toolsofthetrade" className="tools-of-the-trade">
-      <div className="tools-of-the-trade__text-wrapper">
+      <div className="tools-of-the-trade__text-header-wrapper">
         <h2>Tools of the Trade</h2>
 
         <p>
@@ -170,34 +173,52 @@ const ToolsOfTheTrade = () => {
           future ones too.
         </p>
       </div>
-      <div className="tools-of-the-trade__text-wrapper">
-        <h2>Languages</h2>
+      <div className="tools-of-the-trade__text-header-wrapper">
+        <div className="tools-of-the-trade__text-image-wrapper">
+          <img src={one} alt="one" />
 
-        <p>
-          Whatever the project requires, we speak it's language. With expertise
-          in XYZ, we ensure that every project is covered.
-        </p>
+          <div
+            className="tools-of-the-trade__text-image-main-wrapper 
+          tools-of-the-trade__languages"
+          >
+            <h2>Languages</h2>
+            <p>
+              Whatever the project requires, we speak it's language. With
+              expertise in XYZ, we ensure that every project is covered.
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="tools-of-the-trade__text-wrapper">
-        <h2>Tools & Frameworks</h2>
+      <div className="tools-of-the-trade__text-header-wrapper">
+        <div className="tools-of-the-trade__text-image-wrapper">
+          <div className="tools-of-the-trade__text-image-main-wrapper tools-of-the-trade__tools-frameworks">
+            <h2>Tools & Frameworks</h2>
+            <p>
+              We've got a few tricks up our sleeves with expertise in a wide
+              array of tools and frameworks. Whether it's managing a project
+              more effectively or making sure that your business stands out by
+              running efficiently and looking its best, we ensure that you are
+              covered from A-Z.
+            </p>
+          </div>
 
-        <p>
-          We've got a few tricks up our sleeves with expertise in a wide array
-          of tools and frameworks. Whether it's managing a project more
-          effectively or making sure that your business stands out by running
-          efficiently and looking its best, we ensure that you are covered from
-          A-Z.
-        </p>
+          <img src={three} alt="three" />
+        </div>
       </div>
-      <div className="tools-of-the-trade__text-wrapper">
-        <h2>Platforms</h2>
+      <div className="tools-of-the-trade__text-header-wrapper">
+        <div className="tools-of-the-trade__text-image-wrapper">
+          <img src={two} alt="two" />
+          <div className="tools-of-the-trade__text-image-main-wrapper tools-of-the-trade__platforms">
+            <h2>Platforms</h2>
 
-        <p>
-          A great business cannot thrive without a great foundation. That's why
-          we use the best when it comes to how your code, applications, data,
-          and everything else is supported. We want to ensure that as your
-          business grows, the platforms it uses can scale with you.
-        </p>
+            <p>
+              A great business cannot thrive without a great foundation. That's
+              why we use the best when it comes to how your code, applications,
+              data, and everything else is supported. We want to ensure that as
+              your business grows, the platforms it uses can scale with you.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="tools-of-the-trade__all-icon-wrapper">
