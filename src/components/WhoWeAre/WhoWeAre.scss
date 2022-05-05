@@ -37,11 +37,23 @@
   }
 
   &__main {
-    width: 30vw;
   }
 
   &__values-wrapper {
     text-align: center;
     margin-top: 46px;
+  }
+
+  &__image-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__image-icon {
+    width: 156px;
+  }
+
+  &__text {
+    text-align: center;
+    line-height: 2;
   }
 }

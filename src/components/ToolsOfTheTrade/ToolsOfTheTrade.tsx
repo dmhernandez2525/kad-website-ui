@@ -129,31 +129,31 @@ const ToolsOfTheTrade = () => {
   // ====================
   // Display Functions
   // ====================
-  const displayAllSections = () => {
-    return allSections.map((sectionInfo) => {
-      const { sectionTitles, icons } = sectionInfo;
-      const allIcons = icons.map((icon) => (
-        <img
-          className={classnames({
-            'tools-of-the-trade__platform-icons': sectionTitles === 'Platforms',
-            'tools-of-the-trade__toolsandframeworks-icons':
-              sectionTitles === 'Tools & Frameworks',
-            'tools-of-the-trade__languages-icons':
-              sectionTitles === 'Languages',
-          })}
-          src={icon}
-          alt=""
-        />
-      ));
+  // const displayAllSections = () => {
+  //   return allSections.map((sectionInfo) => {
+  //     const { sectionTitles, icons } = sectionInfo;
+  //     const allIcons = icons.map((icon) => (
+  //       <img
+  //         className={classnames({
+  //           'tools-of-the-trade__platform-icons': sectionTitles === 'Platforms',
+  //           'tools-of-the-trade__toolsandframeworks-icons':
+  //             sectionTitles === 'Tools & Frameworks',
+  //           'tools-of-the-trade__languages-icons':
+  //             sectionTitles === 'Languages',
+  //         })}
+  //         src={icon}
+  //         alt=""
+  //       />
+  //     ));
 
-      return (
-        <div className="tools-of-the-trade__icon-wrapper">
-          <h3>{sectionTitles}</h3>
-          <Card className="tools-of-the-trade__card">{allIcons}</Card>
-        </div>
-      );
-    });
-  };
+  //     return (
+  //       <div className="tools-of-the-trade__icon-wrapper">
+  //         <h3>{sectionTitles}</h3>
+  //         <Card className="tools-of-the-trade__card">{allIcons}</Card>
+  //       </div>
+  //     );
+  //   });
+  // };
   // ====================
   // Return
   // ====================
@@ -170,9 +170,38 @@ const ToolsOfTheTrade = () => {
           future ones too.
         </p>
       </div>
+      <div className="tools-of-the-trade__text-wrapper">
+        <h2>Languages</h2>
+
+        <p>
+          Whatever the project requires, we speak it's language. With expertise
+          in XYZ, we ensure that every project is covered.
+        </p>
+      </div>
+      <div className="tools-of-the-trade__text-wrapper">
+        <h2>Tools & Frameworks</h2>
+
+        <p>
+          We've got a few tricks up our sleeves with expertise in a wide array
+          of tools and frameworks. Whether it's managing a project more
+          effectively or making sure that your business stands out by running
+          efficiently and looking its best, we ensure that you are covered from
+          A-Z.
+        </p>
+      </div>
+      <div className="tools-of-the-trade__text-wrapper">
+        <h2>Platforms</h2>
+
+        <p>
+          A great business cannot thrive without a great foundation. That's why
+          we use the best when it comes to how your code, applications, data,
+          and everything else is supported. We want to ensure that as your
+          business grows, the platforms it uses can scale with you.
+        </p>
+      </div>
 
       <div className="tools-of-the-trade__all-icon-wrapper">
-        {displayAllSections()}
+        {/* {displayAllSections()} */}
       </div>
     </div>
   );
