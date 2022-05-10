@@ -1,4 +1,7 @@
 .tools-of-the-trade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: url('../../images/blueBackground.svg');
   background-attachment: fixed;
   background-position: center;
@@ -16,6 +19,7 @@
   }
 
   &__text-header-wrapper {
+    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
