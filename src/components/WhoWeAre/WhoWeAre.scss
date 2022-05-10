@@ -1,5 +1,6 @@
 .who-we-are {
   display: flex;
+  justify-content: center;
   align-items: center;
   background: url('../../images/grayBackground.svg');
   background-attachment: fixed;
@@ -112,6 +113,7 @@
     line-height: 2;
     font-family: Domus;
     font-size: 18px;
+    width: 60vw;
   }
 
   // Our Story

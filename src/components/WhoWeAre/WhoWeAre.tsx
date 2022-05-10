@@ -191,12 +191,12 @@ const WhoWeAre = () => {
               </div>
             </div>
           </div>
-          {displayNavButtons()}
+          {/* {displayNavButtons()} */}
         </>
       )}
       {toggleType === 'ourstory' && (
         <>
-          {displayNavButtons()}
+          {/* {displayNavButtons()} */}
           <div className="who-we-are__ourStoryWrapper">
             <h1> Our Story</h1>
             <p>
