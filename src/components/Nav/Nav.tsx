@@ -58,10 +58,10 @@ const Nav = () => {
         alt="kad logo"
       />
       <a href="#home">HOME</a>
-      <a href="#whoweare">WHO WE ARE</a>
+      <a href="#whoweare">OUR BUSINESS</a>
       <a href="#whatwedo">WHAT WE DO</a>
       <a href="#process">OUR PROCESS</a>
-      <a href="#toolsofthetrade">TOOLS OF THE TRADE</a>
+      <a href="#toolsofthetrade">OUR STORY</a>
       {/* <a href="#contact"> */}
       <button className="navbar__button">CONTACT</button>
       {/* </a> */}
