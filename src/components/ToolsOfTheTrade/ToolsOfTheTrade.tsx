@@ -181,7 +181,7 @@ const ToolsOfTheTrade = () => {
             className="tools-of-the-trade__text-image-main-wrapper 
           tools-of-the-trade__languages"
           >
-            <h2>Languages</h2>
+            <h3>Languages</h3>
             <p>
               Whatever the project requires, we speak it's language. With
               expertise in XYZ, we ensure that every project is covered.
@@ -192,7 +192,7 @@ const ToolsOfTheTrade = () => {
       <div className="tools-of-the-trade__text-header-wrapper">
         <div className="tools-of-the-trade__text-image-wrapper">
           <div className="tools-of-the-trade__text-image-main-wrapper tools-of-the-trade__tools-frameworks">
-            <h2>Tools & Frameworks</h2>
+            <h3>Tools & Frameworks</h3>
             <p>
               We've got a few tricks up our sleeves with expertise in a wide
               array of tools and frameworks. Whether it's managing a project
@@ -209,7 +209,7 @@ const ToolsOfTheTrade = () => {
         <div className="tools-of-the-trade__text-image-wrapper">
           <img src={two} alt="two" />
           <div className="tools-of-the-trade__text-image-main-wrapper tools-of-the-trade__platforms">
-            <h2>Platforms</h2>
+            <h3>Platforms</h3>
 
             <p>
               A great business cannot thrive without a great foundation. That's

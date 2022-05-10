@@ -5,8 +5,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  width: fit-content;
   height: fit-content;
   padding: 75px;
   &__info-cards-wrapper {
@@ -16,7 +18,7 @@
   h1 {
     margin: 0px;
     color: white;
-    font-size: 64px;
+    font-size: 40px;
     margin-bottom: 48px;
   }
   h2 {
@@ -29,30 +31,30 @@
     color: white;
     text-align: left;
     margin-bottom: 50px;
-    width: 40vw;
+    width: 28vw;
 
     p {
-      margin-left: 53px;
+      margin-left: 15px;
+      font-size: 18px;
     }
     h2 {
-      margin-left: 53px;
+      margin-left: 15px;
+      font-size: 26px;
     }
   }
 
   &__all-content-wrapper {
     display: flex;
+    width: 60vw;
     img {
-      width: 25%;
+      width: 20%;
     }
-  }
-
-  &__text-wrapper {
   }
 
   &__text {
     text-align: left;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 44px;
     margin-left: 32px;
   }
