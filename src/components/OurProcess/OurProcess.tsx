@@ -64,7 +64,12 @@ const OurProcess = () => {
       const { title, text } = content;
 
       const ele = (
-        <div className="our-process__content-item-wrapper">
+        <div
+          className={classnames({
+            'our-process__content-item-wrapper': true,
+            'our-process__content-item-wrapper-left': i % 2 === 1,
+          })}
+        >
           <div className="our-process__process-image-text-wrapper">
             <div className="our-process__content-item-process-text-wrapper">
               <span>{title}</span>
@@ -78,9 +83,17 @@ const OurProcess = () => {
               alt="process circle"
             />
           </div>
-          <p>{text}</p>
+          <p
+            className={classnames({
+              'our-process__process-text-right': i % 2 === 0,
+              'our-process__process-text-left': i % 2 === 1,
+            })}
+          >
+            {text}
+          </p>
         </div>
       );
+
       if (i % 2 === 0) {
         right.push(ele);
       } else if (i % 2 === 1) {
@@ -105,22 +118,13 @@ const OurProcess = () => {
 
   return (
     <div id="process" className="our-process">
-      <h2 className="our-process__header">OurProcess</h2>
-
-      <div>
-        <div>
-          <img src="" alt="" />
-          <span>Vision Mission Values</span>
-        </div>
-        <p>
-          Throughout the whole process, our team makes sure that we are
-          constantly aligning with your vision, mission, and values through
-          various forms of communication and touchpoints
-        </p>
-      </div>
-      <div className="our-process__content-items-wrapper">
-        {displayContent()}
-      </div>
+      <h2 className="our-process__header">OUR PROCESS</h2>
+      <p>
+        Throughout the whole process, our team makes sure that we are constantly
+        aligning with your vision, mission, and values through various forms of
+        communication and touchpoints
+      </p>
+      {displayContent()}
     </div>
   );
 };
