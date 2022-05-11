@@ -1,6 +1,6 @@
 // Outside packages
-import react, { useState } from 'react';
-
+import react, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com';
 // Images
 import Logo from '../../images/kadLogoBlack.svg';
 
@@ -18,7 +18,7 @@ const ContactUs = () => {
   // ====================
   // Variables
   // ====================
-
+  const form: any = useRef();
   // ====================
   // State
   // ====================
@@ -26,6 +26,30 @@ const ContactUs = () => {
   // ====================
   // Handle Methods
   // ====================
+  const handleSendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_7sy4d2s',
+        'template_blk0pv6',
+        form.current,
+        'i1Fhd5I0bpuTjDvUL'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+  };
 
   // ====================
   // Display Functions
@@ -54,61 +78,67 @@ const ContactUs = () => {
 
         <div className="contact-us__form-wrapper">
           <h2>Get In Touch</h2>
-          <div className="contact-us__form">
-            <div className="contact-us__form-item-wrapper">
+          <form ref={form} onSubmit={handleSendEmail}>
+            <div className="contact-us__form">
+              <div className="contact-us__form-item-wrapper">
+                <div className="contact-us__form-item">
+                  <label html-for="Name">Name</label>
+                  <input
+                    className="nameInput"
+                    type="text"
+                    id="Name"
+                    name="name"
+                    value={name}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                      setName(e.target.value)
+                    }
+                  />
+                </div>
+                <div className="contact-us__form-item">
+                  <label html-for="Email">Email</label>
+                  <input
+                    type="text"
+                    id="Email"
+                    name="email"
+                    value={email}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                      setEmail(e.target.value)
+                    }
+                  />
+                </div>
+              </div>
+
               <div className="contact-us__form-item">
-                <label html-for="Name">Name</label>
+                <label html-for="Subject">Subject</label>
                 <input
-                  className="nameInput"
                   type="text"
-                  id="Name"
-                  value={name}
+                  id="Subject"
+                  name="subject"
+                  value={subject}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setName(e.target.value)
+                    setSubject(e.target.value)
                   }
                 />
               </div>
+
               <div className="contact-us__form-item">
-                <label html-for="Email">Email</label>
+                <label html-for="Message">Message</label>
                 <input
                   type="text"
-                  id="Email"
-                  value={email}
+                  id="Message"
+                  name="message"
+                  value={message}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setEmail(e.target.value)
+                    setMessage(e.target.value)
                   }
                 />
               </div>
-            </div>
 
-            <div className="contact-us__form-item">
-              <label html-for="Subject">Subject</label>
-              <input
-                type="text"
-                id="Subject"
-                value={subject}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setSubject(e.target.value)
-                }
-              />
+              <div className="contact-us__button-wrapper">
+                <button className="contact-us__button">Submit</button>
+              </div>
             </div>
-
-            <div className="contact-us__form-item">
-              <label html-for="Message">Message</label>
-              <input
-                type="text"
-                id="Message"
-                value={message}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setMessage(e.target.value)
-                }
-              />
-            </div>
-
-            <div className="contact-us__button-wrapper">
-              <button className="contact-us__button">Submit</button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
 
