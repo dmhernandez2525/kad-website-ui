@@ -1,4 +1,5 @@
 // Outside packages
+import classNames from 'classnames';
 import react from 'react';
 
 // Components
@@ -6,6 +7,9 @@ import react from 'react';
 // Images
 import ProcessCircle from '../../images/processCircle.svg';
 import test from '../../images/test.png';
+
+// Utils
+import classnames from 'classnames';
 
 // Styles
 import './OurProcess.scss';
@@ -54,25 +58,46 @@ const OurProcess = () => {
   // Display Functions
   // ====================
   const displayContent = () => {
-    return allContent.map((content, i) => {
+    const left: any = [];
+    const right: any = [];
+    allContent.map((content, i) => {
       const { title, text } = content;
-      return (
+
+      const ele = (
         <div className="our-process__content-item-wrapper">
-          <div>
+          <div className="our-process__process-image-text-wrapper">
+            <div className="our-process__content-item-process-text-wrapper">
+              <span>{title}</span>
+              <span className="our-process__content-item-process-number">
+                {i}
+              </span>
+            </div>
             <img
               className="our-process__content-item-process-circle"
               src={ProcessCircle}
               alt="process circle"
             />
-            <div className="our-process__content-item-process-text-wrapper">
-              <span>{title}</span>
-              <span>{i}</span>
-            </div>
           </div>
           <p>{text}</p>
         </div>
       );
+      if (i % 2 === 0) {
+        left.push(ele);
+      } else if (i % 2 === 1) {
+        right.push(ele);
+      }
     });
+
+    return (
+      <div className="our-process__all-content-item-wrapper">
+        <div className="our-process__all-content-item our-process__content-item-right">
+          {right}
+        </div>
+        <div className="our-process__all-content-item our-process__content-item-left">
+          {left}
+        </div>
+      </div>
+    );
   };
   // ====================
   // Return
@@ -81,8 +106,7 @@ const OurProcess = () => {
   return (
     <div id="process" className="our-process">
       <h2 className="our-process__header">OurProcess</h2>
-      <img src={test} alt="" />
-      {/* 
+
       <div>
         <div>
           <img src="" alt="" />
@@ -96,7 +120,7 @@ const OurProcess = () => {
       </div>
       <div className="our-process__content-items-wrapper">
         {displayContent()}
-      </div> */}
+      </div>
     </div>
   );
 };

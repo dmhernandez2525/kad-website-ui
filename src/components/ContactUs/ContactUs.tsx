@@ -41,8 +41,8 @@ const ContactUs = () => {
         <div className="contact-us__main-form-contact-us">
           <h2>Contact Us</h2>
           <span>KAD Consulting, LLC</span>
-          <a href="tel:217-508-9193" aria-label="call 217-508-9193">
-            Phone: 217-508-9193
+          <a href="tel:‭303-819-1448" aria-label="call ‭303-819-1448">
+            Phone: ‭303-819-1448‬
           </a>
           <a
             href="mailto:danher2525@gmail.com"

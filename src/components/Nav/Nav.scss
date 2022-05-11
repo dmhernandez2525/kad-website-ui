@@ -8,6 +8,7 @@
   width: 100%;
   top: 0;
   transition: top 0.3s;
+  z-index: 1;
 
   &__button {
     border-radius: 27px;
