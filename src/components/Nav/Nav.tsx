@@ -1,5 +1,6 @@
 // Outside packages
 import react, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 // Components
 
@@ -61,10 +62,9 @@ const Nav = () => {
       <a href="#whoweare">OUR BUSINESS</a>
       <a href="#whatwedo">WHAT WE DO</a>
       <a href="#process">OUR PROCESS</a>
-      <a href="#toolsofthetrade">OUR STORY</a>
-      {/* <a href="#contact"> */}
+      <Link to="/ourstory">OUR STORY</Link>
+
       <button className="navbar__button">CONTACT</button>
-      {/* </a> */}
     </div>
   );
 };
