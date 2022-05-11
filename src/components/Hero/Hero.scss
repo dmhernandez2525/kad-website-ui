@@ -1,7 +1,7 @@
 .hero {
   background: url('../../images/Epcot.svg');
-  background-attachment: fixed;
-  background-position: center;
+  background-attachment: inherit;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -11,6 +11,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &__text-wrapper {
+    margin-top: 32px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__text-top {
     color: #364655;

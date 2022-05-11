@@ -25,11 +25,13 @@ const Hero = () => {
 
   return (
     <div id="home" className="hero">
-      <span className="hero__text-top">OUR MISSION</span>
-      <span className="hero__heading">EVEN THE TECHNOLOGY PLAYING FIELD</span>
-      <span className="hero__text-bottom">
-        BETWEEN GROWING BRANDS AND ENTERPRISES
-      </span>
+      <div className="hero__text-wrapper">
+        <span className="hero__text-top">OUR MISSION</span>
+        <span className="hero__heading">EVEN THE TECHNOLOGY PLAYING FIELD</span>
+        <span className="hero__text-bottom">
+          BETWEEN GROWING BRANDS AND ENTERPRISES
+        </span>
+      </div>
     </div>
   );
 };
