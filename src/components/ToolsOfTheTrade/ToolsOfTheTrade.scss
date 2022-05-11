@@ -27,6 +27,12 @@
 
   &__text-image-wrapper {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__text-image {
+    width: 20vw;
   }
 
   &__text-image-main-wrapper {
@@ -42,23 +48,23 @@
 
   &__languages {
     text-align: left !important;
-    margin-left: 50px;
+    width: 30vw;
     p {
       text-align: left !important;
     }
   }
 
   &__tools-frameworks {
-    text-align: left !important;
-    margin-right: 50px;
+    text-align: right !important;
+    width: 30vw;
     p {
-      text-align: left !important;
+      text-align: right !important;
     }
   }
 
   &__platforms {
     text-align: left !important;
-    margin-left: 50px;
+    width: 30vw;
     p {
       text-align: left !important;
     }

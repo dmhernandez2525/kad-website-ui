@@ -175,7 +175,7 @@ const ToolsOfTheTrade = () => {
       </div>
       <div className="tools-of-the-trade__text-header-wrapper">
         <div className="tools-of-the-trade__text-image-wrapper">
-          <img src={one} alt="one" />
+          <img className="tools-of-the-trade__text-image" src={one} alt="one" />
 
           <div
             className="tools-of-the-trade__text-image-main-wrapper 
@@ -202,12 +202,16 @@ const ToolsOfTheTrade = () => {
             </p>
           </div>
 
-          <img src={three} alt="three" />
+          <img
+            className="tools-of-the-trade__text-image"
+            src={three}
+            alt="three"
+          />
         </div>
       </div>
       <div className="tools-of-the-trade__text-header-wrapper">
         <div className="tools-of-the-trade__text-image-wrapper">
-          <img src={two} alt="two" />
+          <img className="tools-of-the-trade__text-image" src={two} alt="two" />
           <div className="tools-of-the-trade__text-image-main-wrapper tools-of-the-trade__platforms">
             <h3>Platforms</h3>
 

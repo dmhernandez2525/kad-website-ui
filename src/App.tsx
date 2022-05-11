@@ -23,7 +23,7 @@ import './App.scss';
 
 const App = () => {
   const { width } = useWindowDimensions();
-  if (width > 600) {
+  if (width > 1000) {
     return (
       <div className="app">
         <Nav></Nav>
