@@ -45,10 +45,10 @@ const ContactUs = () => {
             Phone: ‭303-819-1448‬
           </a>
           <a
-            href="mailto:danher2525@gmail.com"
-            aria-label="send an email to danher2525@gmail.com"
+            href="support@kadconsulting.it"
+            aria-label="send an email to support@kadconsulting.it"
           >
-            Email: danher2525@gmail.com
+            Email: support@kadconsulting.it
           </a>
         </div>
 
