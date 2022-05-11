@@ -1,6 +1,5 @@
 .info-card {
   left: 261px;
-  height: 298px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 10px 6px 0px 5px #2a83e9;
   border: 1px solid #eeeeee;
@@ -12,6 +11,7 @@
   flex-direction: column;
   padding: 31px;
   text-align: initial;
+  height: initial;
 
   &__header-text {
     font-family: Domus;
