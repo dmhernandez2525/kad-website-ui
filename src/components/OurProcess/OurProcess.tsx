@@ -69,7 +69,7 @@ const OurProcess = () => {
             <div className="our-process__content-item-process-text-wrapper">
               <span>{title}</span>
               <span className="our-process__content-item-process-number">
-                {i}
+                {i + 1}
               </span>
             </div>
             <img
@@ -82,9 +82,9 @@ const OurProcess = () => {
         </div>
       );
       if (i % 2 === 0) {
-        left.push(ele);
-      } else if (i % 2 === 1) {
         right.push(ele);
+      } else if (i % 2 === 1) {
+        left.push(ele);
       }
     });
 
