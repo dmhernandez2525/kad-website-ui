@@ -6,6 +6,9 @@ import react from 'react';
 // Styles
 import './Hero.scss';
 
+// ====================
+// Component
+// ====================
 const Hero = () => {
   // ====================
   // State

@@ -1,13 +1,13 @@
 .our-story {
   display: flex;
   justify-content: center;
+  padding: 75px;
+
   background: url('../../images/grayBackground.svg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  padding: 75px;
 
   &__wrapper {
     width: 85%;
@@ -25,6 +25,7 @@
       text-align: left;
     }
   }
+
   &__our-founders-image-wrapper {
     display: flex;
     justify-content: space-evenly;

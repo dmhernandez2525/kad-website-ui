@@ -1,6 +1,7 @@
 // Outside packages
 import react, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
+
 // Images
 import Logo from '../../images/kadLogoBlack.svg';
 
@@ -11,14 +12,16 @@ const ContactUs = () => {
   // ====================
   // State
   // ====================
-  const [name, setName] = useState<any>();
-  const [email, setEmail] = useState<any>();
-  const [subject, setSubject] = useState<any>();
-  const [message, setMessage] = useState<any>();
+  const [name, setName] = useState<string>();
+  const [email, setEmail] = useState<string>();
+  const [subject, setSubject] = useState<string>();
+  const [message, setMessage] = useState<string>();
+
   // ====================
   // Variables
   // ====================
   const form: any = useRef();
+
   // ====================
   // State
   // ====================

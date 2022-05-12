@@ -1,5 +1,4 @@
 // Outside packages
-import classNames from 'classnames';
 import react from 'react';
 
 // Components
@@ -14,6 +13,9 @@ import classnames from 'classnames';
 // Styles
 import './OurProcess.scss';
 
+// ====================
+// Component
+// ====================
 const OurProcess = () => {
   // ====================
   // Variables

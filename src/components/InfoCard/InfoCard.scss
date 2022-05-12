@@ -1,25 +1,29 @@
 .info-card {
   left: 261px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 31px;
+  height: initial;
+
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 10px 6px 0px 5px #2a83e9;
   border: 1px solid #eeeeee;
   background-size: 13vw;
   background-position: center;
   color: black;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 31px;
   text-align: initial;
-  height: initial;
 
   &__header-text {
     font-family: Domus;
     font-size: 20px;
     font-weight: bold;
   }
+
   &__main-section {
     height: 80%;
+
     font-family: 'Domus';
     font-size: 18px;
     line-height: 2;

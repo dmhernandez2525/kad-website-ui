@@ -6,11 +6,18 @@ import react from 'react';
 // Styles
 import './InfoCard.scss';
 
+// ====================
+// Interfaces
+// ====================
 interface IInfoCardProps {
   headerFirst: string;
   headerSecond: string;
   mainSection: string;
 }
+
+// ====================
+// Component
+// ====================
 const InfoCard = ({
   headerFirst,
   headerSecond,

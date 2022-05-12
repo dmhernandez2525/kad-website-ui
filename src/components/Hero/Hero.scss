@@ -1,16 +1,15 @@
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 990px;
+  align-items: center;
+
   background: url('../../images/Epcot.svg');
   background-attachment: inherit;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  height: 990px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   &__text-wrapper {
     margin-top: 32px;
@@ -25,13 +24,16 @@
     color: #364655;
     font-size: 16px;
   }
+
   &__text-bottom {
+    width: 224px;
+    margin-top: 6px;
+
     color: #364655;
     font-size: 16px;
-    width: 224px;
     text-align: center;
-    margin-top: 6px;
   }
+
   &__heading {
     color: #ffffff;
     font-size: 48px;

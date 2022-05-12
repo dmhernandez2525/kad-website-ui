@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: fit-content;
+  padding: 32px;
+
   background: url('../../images/blueBackground.svg');
   background-attachment: fixed;
   background-position: center;
@@ -11,18 +14,26 @@
   text-align: center;
   color: white;
 
-  height: fit-content;
-  padding: 32px;
+  h2 {
+    margin: 0px;
 
-  &__info-cards-wrapper {
-    display: flex;
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
   }
 
   &__text-header-wrapper {
-    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 60vw;
   }
 
   &__text-image-wrapper {
@@ -36,10 +47,11 @@
   }
 
   &__text-image-main-wrapper {
-    text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    text-align: center;
 
     p {
       font-size: 18px;
@@ -47,76 +59,38 @@
   }
 
   &__languages {
-    text-align: left !important;
     width: 30vw;
+
+    text-align: left !important;
     p {
       text-align: left !important;
     }
   }
 
   &__tools-frameworks {
-    text-align: right !important;
     width: 30vw;
+
+    text-align: right !important;
     p {
       text-align: right !important;
     }
   }
 
   &__platforms {
-    text-align: left !important;
     width: 30vw;
+
+    text-align: left !important;
     p {
       text-align: left !important;
     }
   }
 
-  h2 {
-    margin: 0px;
-    // font-family: DomusTitling;
-    font-size: 40px;
-  }
-  h3 {
-    font-size: 26px;
-  }
-
-  p {
-    text-align: center;
-    font-size: 18px;
-  }
-
-  &__icon-wrapper {
-    text-align: center;
-  }
-
   &__all-icon-wrapper {
     display: grid;
-    grid-template-columns: auto auto auto;
     padding: 0 134px;
+    height: 100%;
+
+    grid-template-columns: auto auto auto;
     column-gap: 17px;
-    height: 100%;
-  }
-
-  &__platform-icons {
-    width: 30%;
-    margin: 13px;
-    flex-grow: 1;
-  }
-
-  &__toolsandframeworks-icons {
-    width: 13%;
-    margin: 16px;
-    flex-grow: 1;
-  }
-
-  &__languages-icons {
-    width: 24%;
-    margin: 13px;
-    flex-grow: 1;
-  }
-
-  &__card {
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
   }
 }

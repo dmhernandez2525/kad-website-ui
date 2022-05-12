@@ -2,19 +2,25 @@
 import react, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
+
 // Components
 
 // Images
 import LogoWhite from '../../images/kadLogoWhite.svg';
 import LogoBlack from '../../images/kadLogoBlack.svg';
+
 // Styles
 import './Nav.scss';
 
+// ====================
+// Component
+// ====================
 const Nav = () => {
   // ====================
   // State
   // ====================
   const [bellow, setBellow] = useState(true);
+
   // ====================
   // Variables
   // ====================
@@ -49,7 +55,6 @@ const Nav = () => {
     <div
       className={classnames({
         navbar: true,
-        navbar__main: !bellow,
         navbar__scroll: bellow,
       })}
     >

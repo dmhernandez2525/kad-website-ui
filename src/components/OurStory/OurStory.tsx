@@ -3,12 +3,16 @@ import react, { useState } from 'react';
 
 // Components
 import { Link } from 'react-router-dom';
+
 // Images
 import Gear from '../../images/OurBusiness/Gear.svg';
 
 // Styles
 import './OurStory.scss';
 
+// ====================
+// Component
+// ====================
 const OurStory = () => {
   // ====================
   // State

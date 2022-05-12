@@ -2,60 +2,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: fit-content;
+  padding: 75px;
+  padding-right: 0px;
+
   background: url('../../images/grayBackground.svg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: fit-content;
-  padding: 75px;
-  padding-right: 0px;
-
-  &__reversed {
-    display: flex;
-    justify-content: space-between;
-    padding: 75px;
-    padding-left: 0px;
-    flex-wrap: wrap-reverse;
-    h1 {
-      text-align: center;
-    }
-  }
-
   &__info-cards-wrapper {
     display: grid;
-    grid-template-columns: auto auto auto;
     width: 60vw;
+
+    grid-template-columns: auto auto auto;
     column-gap: 60px;
     row-gap: 83px;
   }
 
-  &__button-wrapper {
-    margin-bottom: 64px;
-  }
-
-  &__toggled {
-    width: 100px;
-    font-size: 62px;
-    border: none;
-    background: white;
-    height: 75%;
-    padding: 522.4px 26.3px 522.4px;
-    border: solid 1px #707070;
-    background-color: #f4f4f4;
-  }
-  &__toggled:hover {
-    background-color: white;
-  }
-
-  &__not-toggled {
-    display: none;
-    background: inherit;
-  }
-
   &__main-wrapper {
     display: flex;
+
     justify-content: space-between;
   }
 
@@ -64,17 +32,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h1 {
       font-size: 40px;
     }
   }
 
   &__values-wrapper {
-    text-align: center;
-    margin-top: 46px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 46px;
+
+    text-align: center;
+
     h1 {
       font-size: 40px;
     }
@@ -83,36 +54,43 @@
   &__all-image-icon-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 50px;
     width: 60vw;
+    padding: 50px;
   }
+
   &__image-icon-wrapper {
-    width: 15%;
     display: flex;
     flex-direction: column;
+    width: 15%;
+
     text-align: center;
     font-family: Domus;
     font-size: 18px;
   }
+
   &__image-icon {
     width: 100%;
   }
+
   &__mobile-image-icon {
     width: 30%;
   }
+
   &__laptop-mobile-image-icon-wrapper {
     display: flex;
   }
+
   &__laptop-image-icon {
     width: 90%;
     height: 100%;
   }
 
   &__text {
+    width: 60vw;
+
     text-align: center;
     line-height: 2;
     font-family: Domus;
     font-size: 18px;
-    width: 60vw;
   }
 }
