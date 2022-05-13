@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import OurStory from './components/OurStory';
+import Nav from './components/Nav';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -11,7 +12,15 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="ourstory" element={<OurStory />} />
+        <Route
+          path="ourstory"
+          element={
+            <div>
+              <Nav />
+              <OurStory />
+            </div>
+          }
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

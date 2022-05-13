@@ -2,10 +2,10 @@
 import react, { useState } from 'react';
 
 // Components
-import { Link } from 'react-router-dom';
 
 // Images
-import Gear from '../../images/OurBusiness/Gear.svg';
+import Daniel from '../../images/Daniel.jpeg';
+import Keegan from '../../images/Keegan.jpeg';
 
 // Styles
 import './OurStory.scss';
@@ -36,7 +36,6 @@ const OurStory = () => {
 
   return (
     <div className="our-story">
-      <Link to="/">back</Link>
       <div className="our-story__wrapper">
         <h1> Our Story</h1>
         <p>
@@ -70,8 +69,8 @@ const OurStory = () => {
         <p>Our mission is simple: It’s time to level the playing field.</p>
         <h1> Our founders</h1>
         <div className="our-story__our-founders-image-wrapper">
-          <img src={Gear} alt="" />
-          <img src={Gear} alt="" />
+          <img src={Daniel} alt="" />
+          <img src={Keegan} alt="" />
         </div>
       </div>
     </div>

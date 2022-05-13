@@ -26,7 +26,7 @@ const App = () => {
   if (width > 1000) {
     return (
       <div className="app">
-        <Nav></Nav>
+        <Nav />
         <Hero></Hero>
         <WhoWeAre />
         <WhatWeDo />
