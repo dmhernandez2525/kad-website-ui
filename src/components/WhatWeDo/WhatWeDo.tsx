@@ -66,7 +66,7 @@ const WhatWeDo = () => {
       <h1>What We Do</h1>
       <div className="what-we-do__all-content-wrapper">
         <div>{displayContent()}</div>
-        <div>
+        <div className="what-we-do__text-wrapper">
           <p className="what-we-do__text">
             We are focused on helping your business compete with the biggest
             brands out there by eliminating the technology advantage they've had

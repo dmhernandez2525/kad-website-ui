@@ -55,8 +55,14 @@
     }
   }
 
+  &__text-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &__text {
     text-align: left;
+    margin: 0px;
     margin-left: 32px;
 
     color: white;
