@@ -4,9 +4,9 @@ import react from 'react';
 // Components
 
 // Images
-import one from '../../images/ToolsofTheTrade/1.png';
-import two from '../../images/ToolsofTheTrade/2.png';
-import three from '../../images/ToolsofTheTrade/3.png';
+import languages from '../../images/ToolsofTheTrade/languages.png';
+import platforms from '../../images/ToolsofTheTrade/platforms.png';
+import toolsandframeworks from '../../images/ToolsofTheTrade/toolsandframeworks.png';
 
 // Styles
 import './ToolsOfTheTrade.scss';
@@ -51,7 +51,11 @@ const ToolsOfTheTrade = () => {
 
       <div className="tools-of-the-trade__text-header-wrapper">
         <div className="tools-of-the-trade__text-image-wrapper">
-          <img className="tools-of-the-trade__text-image" src={one} alt="one" />
+          <img
+            className="tools-of-the-trade__text-image"
+            src={languages}
+            alt="one"
+          />
 
           <div
             className="tools-of-the-trade__text-image-main-wrapper 
@@ -80,14 +84,18 @@ const ToolsOfTheTrade = () => {
 
           <img
             className="tools-of-the-trade__text-image"
-            src={three}
+            src={toolsandframeworks}
             alt="three"
           />
         </div>
       </div>
       <div className="tools-of-the-trade__text-header-wrapper tools-of-the-trade__neg-marg">
         <div className="tools-of-the-trade__text-image-wrapper">
-          <img className="tools-of-the-trade__text-image" src={two} alt="two" />
+          <img
+            className="tools-of-the-trade__text-image"
+            src={platforms}
+            alt="two"
+          />
           <div className="tools-of-the-trade__text-image-main-wrapper tools-of-the-trade__platforms">
             <h3>Platforms</h3>
 
