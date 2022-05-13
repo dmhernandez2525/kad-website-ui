@@ -65,7 +65,7 @@ const ToolsOfTheTrade = () => {
           </div>
         </div>
       </div>
-      <div className="tools-of-the-trade__text-header-wrapper">
+      <div className="tools-of-the-trade__text-header-wrapper tools-of-the-trade__neg-marg">
         <div className="tools-of-the-trade__text-image-wrapper">
           <div className="tools-of-the-trade__text-image-main-wrapper tools-of-the-trade__tools-frameworks">
             <h3>Tools & Frameworks</h3>
@@ -85,7 +85,7 @@ const ToolsOfTheTrade = () => {
           />
         </div>
       </div>
-      <div className="tools-of-the-trade__text-header-wrapper">
+      <div className="tools-of-the-trade__text-header-wrapper tools-of-the-trade__neg-marg">
         <div className="tools-of-the-trade__text-image-wrapper">
           <img className="tools-of-the-trade__text-image" src={two} alt="two" />
           <div className="tools-of-the-trade__text-image-main-wrapper tools-of-the-trade__platforms">
