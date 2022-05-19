@@ -1,26 +1,22 @@
 // Outside packages
 import react, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
-
+// Components
+import ContactUsForm from './ContactUsForm';
 // Images
 import Logo from '../../images/kadLogoBlack.svg';
 
 // Styles
 import './ContactUs.scss';
 
-const ContactUs = () => {
+const ContactUs = ({ hasFooter }: any) => {
   // ====================
   // State
   // ====================
-  const [name, setName] = useState<string>();
-  const [email, setEmail] = useState<string>();
-  const [subject, setSubject] = useState<string>();
-  const [message, setMessage] = useState<string>();
 
   // ====================
   // Variables
   // ====================
-  const form: any = useRef();
 
   // ====================
   // State
@@ -29,30 +25,6 @@ const ContactUs = () => {
   // ====================
   // Handle Methods
   // ====================
-  const handleSendEmail = (e: any) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_7sy4d2s',
-        'template_blk0pv6',
-        form.current,
-        'i1Fhd5I0bpuTjDvUL'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-
-    setName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
-  };
 
   // ====================
   // Display Functions
@@ -64,99 +36,23 @@ const ContactUs = () => {
 
   return (
     <div id="contact" className="contact-us">
-      <div className="contact-us__main-form-wrapper">
-        <div className="contact-us__main-form-contact-us">
-          <h2>Contact Us</h2>
-          <span>KAD Consulting, LLC</span>
-          <a href="tel:‭303-819-1448" aria-label="call ‭303-819-1448">
-            Phone: ‭303-819-1448‬
-          </a>
-          <a
-            href="support@kadconsulting.it"
-            aria-label="send an email to support@kadconsulting.it"
-          >
-            Email: support@kadconsulting.it
-          </a>
-        </div>
+      <ContactUsForm />
+      {hasFooter && (
+        <>
+          <p>
+            Take our FREE technology health assessment now to see how you stack
+            up against the biggest companies out there.
+          </p>
+          <div>
+            <button className="contact-us__button">Quiz</button>
+          </div>
 
-        <div className="contact-us__form-wrapper">
-          <h2>Get In Touch</h2>
-          <form ref={form} onSubmit={handleSendEmail}>
-            <div className="contact-us__form">
-              <div className="contact-us__form-item-wrapper">
-                <div className="contact-us__form-item">
-                  <label html-for="Name">Name</label>
-                  <input
-                    className="nameInput"
-                    type="text"
-                    id="Name"
-                    name="name"
-                    value={name}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                      setName(e.target.value)
-                    }
-                  />
-                </div>
-                <div className="contact-us__form-item">
-                  <label html-for="Email">Email</label>
-                  <input
-                    type="text"
-                    id="Email"
-                    name="email"
-                    value={email}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                      setEmail(e.target.value)
-                    }
-                  />
-                </div>
-              </div>
-
-              <div className="contact-us__form-item">
-                <label html-for="Subject">Subject</label>
-                <input
-                  type="text"
-                  id="Subject"
-                  name="subject"
-                  value={subject}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSubject(e.target.value)
-                  }
-                />
-              </div>
-
-              <div className="contact-us__form-item">
-                <label html-for="Message">Message</label>
-                <input
-                  type="text"
-                  id="Message"
-                  name="message"
-                  value={message}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setMessage(e.target.value)
-                  }
-                />
-              </div>
-
-              <div className="contact-us__button-wrapper">
-                <button className="contact-us__button">Submit</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <p>
-        Take our FREE technology health assessment now to see how you stack up
-        against the biggest companies out there.
-      </p>
-      <div>
-        <button className="contact-us__button">Quiz</button>
-      </div>
-
-      <footer>
-        <img className="contact-us__logo" src={Logo} alt="kad logo" />
-        <p> &copy; 2022</p>
-      </footer>
+          <footer>
+            <img className="contact-us__logo" src={Logo} alt="kad logo" />
+            <p> &copy; 2022</p>
+          </footer>
+        </>
+      )}
     </div>
   );
 };

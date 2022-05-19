@@ -67,6 +67,7 @@ const OurProcess = () => {
 
       const ele = (
         <div
+          key={`${title} ${i} ${title}`}
           className={classnames({
             'our-process__content-item-wrapper': true,
             'our-process__content-item-wrapper-left': i % 2 === 1,
@@ -119,14 +120,17 @@ const OurProcess = () => {
   // ====================
 
   return (
-    <div id="process" className="our-process">
-      <h2 className="our-process__header">OUR PROCESS</h2>
-      <p>
-        Throughout the whole process, our team makes sure that we are constantly
-        aligning with your vision, mission, and values through various forms of
-        communication and touchpoints
-      </p>
-      {displayContent()}
+    <div className="our-process" id="process">
+      <div className="our-process__spacer"></div>
+      <div className="our-process__wrapper">
+        <h2 className="our-process__header">OUR PROCESS</h2>
+        <p>
+          Throughout the whole process, our team makes sure that we are
+          constantly aligning with your vision, mission, and values through
+          various forms of communication and touchpoints
+        </p>
+        {displayContent()}
+      </div>
     </div>
   );
 };

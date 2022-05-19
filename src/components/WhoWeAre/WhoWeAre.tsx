@@ -69,9 +69,10 @@ const WhoWeAre = () => {
   // Display Functions
   // ====================
   const displayInfoCards = () => {
-    return allCardInfo.map((cardInfo) => {
+    return allCardInfo.map((cardInfo, i) => {
       return (
         <InfoCard
+          key={`${cardInfo.headerFirst} ${i} ${cardInfo.headerSecond}`}
           headerFirst={cardInfo.headerFirst}
           headerSecond={cardInfo.headerSecond}
           mainSection={cardInfo.mainSection}
@@ -94,7 +95,7 @@ const WhoWeAre = () => {
       <div>
         <div className="who-we-are__main-wrapper">
           <div className="who-we-are__main">
-            <h1>Our Business</h1>
+            <h1>OUR BUSINESS</h1>
 
             <p className="who-we-are__text">
               KAD Consulting is a full-stack ERP development and strategy
@@ -155,7 +156,7 @@ const WhoWeAre = () => {
         </div>
 
         <div className="who-we-are__values-wrapper">
-          <h1>Our Values</h1>
+          <h1>OUR VALUES</h1>
           <div className="who-we-are__info-cards-wrapper">
             {displayInfoCards()}
           </div>

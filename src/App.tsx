@@ -32,7 +32,7 @@ const App = () => {
         <WhatWeDo />
         <OurProcess />
         <ToolsOfTheTrade />
-        <ContactUs />
+        <ContactUs hasFooter={true} />
       </div>
     );
   } else {
