@@ -2,7 +2,7 @@ import Hero from './Hero';
 import Nav from './Nav';
 import OurProcess from './OurProcess';
 import WhatWeDo from './WhatWeDo';
-import WhoWeAre from './WhoWeAre';
+import OurBusiness from './OurBusiness';
 import ToolsOfTheTrade from './ToolsOfTheTrade';
 import ContactUs from './ContactUs';
 
@@ -11,7 +11,7 @@ export {
   Nav,
   OurProcess,
   WhatWeDo,
-  WhoWeAre,
+  OurBusiness,
   ToolsOfTheTrade,
   ContactUs,
 };

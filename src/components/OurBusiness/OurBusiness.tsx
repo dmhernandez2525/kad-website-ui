@@ -13,10 +13,10 @@ import Mobile from '../../images/OurBusiness/Mobile.svg';
 import OfficeBag from '../../images/OurBusiness/OfficeBag.svg';
 
 // Styles
-import './WhoWeAre.scss';
+import './OurBusiness.scss';
 import classNames from 'classnames';
 
-const WhoWeAre = () => {
+const OurBusiness = () => {
   // ====================
   // State
   // ====================
@@ -87,17 +87,17 @@ const WhoWeAre = () => {
 
   return (
     <div
-      id="whoweare"
+      id="ourbusiness"
       className={classNames({
-        'who-we-are': true,
+        'our-business': true,
       })}
     >
       <div>
-        <div className="who-we-are__main-wrapper">
-          <div className="who-we-are__main">
+        <div className="our-business__main-wrapper">
+          <div className="our-business__main">
             <h1>OUR BUSINESS</h1>
 
-            <p className="who-we-are__text">
+            <p className="our-business__text">
               KAD Consulting is a full-stack ERP development and strategy
               partner for growing brands. We aim to give them access to advanced
               technology and the expertise to implement it so they can compete
@@ -105,16 +105,16 @@ const WhoWeAre = () => {
               ecosystem that can't keep up.
             </p>
 
-            <div className="who-we-are__all-image-icon-wrapper">
-              <div className="who-we-are__image-icon-wrapper">
-                <div className="who-we-are__laptop-mobile-image-icon-wrapper">
+            <div className="our-business__all-image-icon-wrapper">
+              <div className="our-business__image-icon-wrapper">
+                <div className="our-business__laptop-mobile-image-icon-wrapper">
                   <img
-                    className="who-we-are__laptop-image-icon"
+                    className="our-business__laptop-image-icon"
                     src={Laptop}
                     alt="Laptop"
                   />
                   <img
-                    className="who-we-are__mobile-image-icon"
+                    className="our-business__mobile-image-icon"
                     src={Mobile}
                     alt="Mobile"
                   />
@@ -122,42 +122,46 @@ const WhoWeAre = () => {
 
                 <p> Full-stack web and mobile experiences</p>
               </div>
-              <div className="who-we-are__image-icon-wrapper">
+              <div className="our-business__image-icon-wrapper">
                 <img
-                  className="who-we-are__image-icon"
+                  className="our-business__image-icon"
                   src={OfficeBag}
                   alt="OfficeBag"
                 />
                 <p> Business applications</p>
               </div>
-              <div className="who-we-are__image-icon-wrapper">
+              <div className="our-business__image-icon-wrapper">
                 <img
-                  className="who-we-are__image-icon"
+                  className="our-business__image-icon"
                   src={Hierarchy}
                   alt="Hierarchy"
                 />
                 <p> Technical architecture implementation</p>
               </div>
 
-              <div className="who-we-are__image-icon-wrapper">
+              <div className="our-business__image-icon-wrapper">
                 <img
-                  className="who-we-are__image-icon"
+                  className="our-business__image-icon"
                   src={Graph}
                   alt="Graph"
                 />
                 <p> Data collection and aggregation</p>
               </div>
-              <div className="who-we-are__image-icon-wrapper">
-                <img className="who-we-are__image-icon" src={Gear} alt="Gear" />
+              <div className="our-business__image-icon-wrapper">
+                <img
+                  className="our-business__image-icon"
+                  src={Gear}
+                  alt="Gear"
+                />
                 <p> Automation</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="who-we-are__values-wrapper">
+        <div className="our-business__values-wrapper">
           <h1>OUR VALUES</h1>
-          <div className="who-we-are__info-cards-wrapper">
+          <div className="our-business__info-cards-wrapper">
             {displayInfoCards()}
           </div>
         </div>
@@ -166,4 +170,4 @@ const WhoWeAre = () => {
   );
 };
 
-export default WhoWeAre;
+export default OurBusiness;

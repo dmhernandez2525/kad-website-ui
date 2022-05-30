@@ -93,7 +93,7 @@ const Nav = () => {
       {!shouldNotShow && (
         <>
           <a onClick={() => scrollById('home')}>HOME</a>
-          <a onClick={() => scrollById('whoweare')}>OUR BUSINESS</a>
+          <a onClick={() => scrollById('ourbusiness')}>OUR BUSINESS</a>
           <a onClick={() => scrollById('whatwedo')}>WHAT WE DO</a>
           <a onClick={() => scrollById('process')}>OUR PROCESS</a>
           <Link to="/ourstory">OUR STORY</Link>
@@ -103,7 +103,7 @@ const Nav = () => {
       {shouldNotShow && (
         <>
           <Link to="/#home">HOME</Link>
-          <Link to="/#whoweare">OUR BUSINESS</Link>
+          <Link to="/#ourbusiness">OUR BUSINESS</Link>
           <Link to="/#whatwedo">WHAT WE DO</Link>
           <Link to="/#process">OUR PROCESS</Link>
           <Link to="/ourstory">OUR STORY</Link>
