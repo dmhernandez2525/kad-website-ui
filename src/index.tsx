@@ -1,10 +1,17 @@
+// Outside packages
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './index.css';
+
+// Components
 import App from './App';
-import { OurStory, Nav, MobileNav } from './components';
+import { OurStory, Nav } from './components';
+
+// Helpers
 import reportWebVitals from './reportWebVitals';
+
+// Styles
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,7 +23,6 @@ ReactDOM.render(
           element={
             <div>
               <Nav />
-              <MobileNav />
               <OurStory />
             </div>
           }

@@ -1,7 +1,11 @@
 // Outside packages
-import React, { useState } from 'react';
+import React from 'react';
 
 // Components
+import MobileNav from '../MobileNav';
+
+// Hooks
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 // Styles
 import './OurStory.scss';
@@ -13,6 +17,11 @@ const OurStory = () => {
   // ====================
   // State
   // ====================
+
+  // ====================
+  // Hooks
+  // ====================
+  const { width } = useWindowDimensions();
 
   // ====================
   // Variables
@@ -32,6 +41,7 @@ const OurStory = () => {
 
   return (
     <div className="our-story">
+      {width < 1000 && <MobileNav />}
       <div className="our-story__wrapper">
         <h1> Our Story</h1>
         <p>
