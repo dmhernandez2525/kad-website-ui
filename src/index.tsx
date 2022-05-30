@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import OurStory from './components/OurStory';
-import Nav from './components/Nav';
+import { OurStory, Nav, MobileNav } from './components';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -17,6 +16,7 @@ ReactDOM.render(
           element={
             <div>
               <Nav />
+              <MobileNav />
               <OurStory />
             </div>
           }

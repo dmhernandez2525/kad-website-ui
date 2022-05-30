@@ -10,6 +10,7 @@ import {
   OurBusiness,
   ToolsOfTheTrade,
   ContactUs,
+  MobileNav,
 } from './components';
 
 // Images
@@ -22,6 +23,7 @@ const App = () => {
   return (
     <div className="app">
       <Nav />
+      <MobileNav />
       <Hero></Hero>
       <OurBusiness />
       <WhatWeDo />
