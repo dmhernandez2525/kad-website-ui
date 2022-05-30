@@ -1,7 +1,11 @@
 // Outside packages
-import react from 'react';
+import React from 'react';
+import classnames from 'classnames';
 
 // Components
+
+// Hooks
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 // Images
 import Blocks from './images/blocks.svg';
@@ -12,6 +16,11 @@ import Computer from './images/computer.svg';
 import './WhatWeDo.scss';
 
 const WhatWeDo = () => {
+  // ====================
+  // Hooks
+  // ====================
+  const { width } = useWindowDimensions();
+
   // ====================
   // Variables
   // ====================
@@ -46,13 +55,26 @@ const WhatWeDo = () => {
   const displayContent = () => {
     return allContent.map((contentObj, i) => {
       const { icon, header, text } = contentObj;
+
       return (
         <div
           key={`${header} ${i} ${icon}`}
-          className="what-we-do__content-wrapper"
+          className={classnames({
+            'what-we-do__content-wrapper': width > 1000,
+            'what-we-do__content-mobile-wrapper': width < 1000,
+            'what-we-do__content-wrapper-right': width < 1000 && i % 2 === 1,
+            'what-we-do__content-wrapper-left': width < 1000 && i % 2 === 0,
+          })}
         >
           <img src={icon} alt="" />
-          <div>
+          <div
+            className={classnames({
+              'what-we-do__content-text-wrapper-right':
+                width < 1000 && i % 2 === 1,
+              'what-we-do__content-text-wrapper-left':
+                width < 1000 && i % 2 === 0,
+            })}
+          >
             <h2>{header}</h2>
             <p>{text}</p>
           </div>
@@ -69,8 +91,11 @@ const WhatWeDo = () => {
       <div className="what-we-do__spacer"></div>
       <div className="what-we-do__wrapper">
         <h1>WHAT WE DO</h1>
+
         <div className="what-we-do__all-content-wrapper">
-          <div>{displayContent()}</div>
+          <div className="what-we-do__all-items-content-wrapper">
+            {displayContent()}
+          </div>
           <div className="what-we-do__text-wrapper">
             <p className="what-we-do__text">
               We are focused on helping your business compete with the biggest

@@ -119,3 +119,69 @@
 .nameInput {
   width: 92% !important;
 }
+
+@media screen and (max-width: 1000px) {
+  .contact-us {
+    height: fit-content;
+    padding: 21px 15px 0px 15px;
+
+    &__form-wrapper {
+      width: 100%;
+      margin-left: 0px;
+
+      h2 {
+        font-size: 23px;
+        text-align: center;
+      }
+    }
+
+    &__header-info-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__header-info-a-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-top: 24px;
+
+      text-decoration: none;
+
+      a {
+        margin-top: 8px;
+
+        font-size: 12px;
+        text-align: center;
+      }
+
+      a:link {
+        color: white;
+      }
+
+      a:visited {
+        color: white;
+      }
+
+      a:hover {
+        color: blue;
+      }
+
+      a:active {
+        color: white;
+      }
+    }
+
+    footer {
+      margin-top: 36px;
+
+      &__logo {
+        width: 164px;
+      }
+
+      p {
+        font-size: unset;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 // Outside packages
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 
 // Components
 

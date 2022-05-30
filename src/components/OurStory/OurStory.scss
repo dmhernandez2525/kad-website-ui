@@ -35,3 +35,21 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .our-story {
+    padding: 0px 15px 48px 15px;
+
+    &__wrapper {
+      width: 100%;
+
+      h2 {
+        font-size: 23px;
+      }
+
+      > p {
+        width: 100%;
+      }
+    }
+  }
+}

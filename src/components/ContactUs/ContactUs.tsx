@@ -1,5 +1,5 @@
 // Outside packages
-import react, { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
 // Components
 import ContactUsForm from './ContactUsForm';

@@ -102,3 +102,57 @@
     column-gap: 17px;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .tools-of-the-trade {
+    &__wrapper {
+      padding: 0px 15px 48px 15px;
+
+      h2 {
+        font-size: 23px;
+      }
+
+      > p {
+        width: 100%;
+      }
+    }
+
+    &__text-header-wrapper {
+      width: 100%;
+    }
+
+    &__text-image {
+      width: 45%;
+    }
+
+    &__languages {
+      width: 50%;
+      h3 {
+        font-size: 28px;
+        font-weight: bold;
+      }
+    }
+
+    &__tools-frameworks {
+      width: 50%;
+
+      h3 {
+        font-size: 28px;
+        font-weight: bold;
+      }
+    }
+
+    &__platforms {
+      width: 50%;
+
+      h3 {
+        font-size: 28px;
+        font-weight: bold;
+      }
+    }
+
+    &__neg-marg {
+      margin-top: 58px;
+    }
+  }
+}

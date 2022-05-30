@@ -76,3 +76,61 @@
     line-height: 44px;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .what-we-do {
+    h1 {
+      margin-bottom: 8px;
+
+      font-size: 23px;
+      font-weight: 600;
+    }
+
+    &__wrapper {
+      padding: 0px 15px 48px 15px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+    &__all-items-content-wrapper {
+      color: white;
+      font-size: 12px;
+
+      h2 {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    &__all-content-wrapper {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+
+    &__content-mobile-wrapper {
+      margin-top: 36px;
+    }
+
+    &__content-wrapper-right {
+      display: flex;
+      flex-direction: row-reverse;
+
+      text-align: right;
+    }
+
+    &__content-wrapper-left {
+      display: flex;
+      text-align: initial;
+    }
+
+    &__content-text-wrapper-left {
+      margin-left: 16px;
+    }
+    &__content-text-wrapper-right {
+      margin-right: 16px;
+    }
+  }
+}

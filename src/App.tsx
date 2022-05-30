@@ -1,5 +1,5 @@
 // Outside packages
-import react from 'react';
+import React from 'react';
 
 // Components
 import {
@@ -12,9 +12,6 @@ import {
   ContactUs,
 } from './components';
 
-// Hooks
-import useWindowDimensions from './hooks/useWindowDimensions';
-
 // Images
 import noPhone from './images/noPhone.png';
 
@@ -22,7 +19,6 @@ import noPhone from './images/noPhone.png';
 import './App.scss';
 
 const App = () => {
-  const { width } = useWindowDimensions();
   return (
     <div className="app">
       <Nav />

@@ -1,11 +1,13 @@
 // Outside packages
-import react from 'react';
+import React from 'react';
 
 // Components
 
 // Images
 import ProcessCircle from '../../images/processCircle.svg';
-import test from '../../images/test.png';
+
+// Hooks
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 // Utils
 import classnames from 'classnames';
@@ -17,6 +19,11 @@ import './OurProcess.scss';
 // Component
 // ====================
 const OurProcess = () => {
+  // ====================
+  // Hooks
+  // ====================
+  const { width } = useWindowDimensions();
+
   // ====================
   // Variables
   // ====================
@@ -60,6 +67,7 @@ const OurProcess = () => {
   // Display Functions
   // ====================
   const displayContent = () => {
+    const all: any = [];
     const left: any = [];
     const right: any = [];
     allContent.map((content, i) => {
@@ -96,24 +104,28 @@ const OurProcess = () => {
           </p>
         </div>
       );
-
-      if (i % 2 === 0) {
+      if (width < 1000) {
+        all.push(ele);
+      } else if (i % 2 === 0) {
         right.push(ele);
       } else if (i % 2 === 1) {
         left.push(ele);
       }
     });
-
-    return (
-      <div className="our-process__all-content-item-wrapper">
-        <div className="our-process__all-content-item our-process__content-item-right">
-          {right}
+    if (width > 1000) {
+      return (
+        <div className="our-process__all-content-item-wrapper">
+          <div className="our-process__all-content-item our-process__content-item-right">
+            {right}
+          </div>
+          <div className="our-process__all-content-item our-process__content-item-left">
+            {left}
+          </div>
         </div>
-        <div className="our-process__all-content-item our-process__content-item-left">
-          {left}
-        </div>
-      </div>
-    );
+      );
+    } else {
+      return <div className="our-process__all-content-item-wrapper">{all}</div>;
+    }
   };
   // ====================
   // Return

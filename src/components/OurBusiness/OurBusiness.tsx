@@ -1,8 +1,11 @@
 // Outside packages
-import react from 'react';
+import React from 'react';
 
 // Components
 import InfoCard from '../InfoCard';
+
+// Hooks
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 // Images
 import Gear from '../../images/OurBusiness/Gear.svg';
@@ -20,6 +23,11 @@ const OurBusiness = () => {
   // ====================
   // State
   // ====================
+
+  // ====================
+  // Hooks
+  // ====================
+  const { width } = useWindowDimensions();
 
   // ====================
   // Variables
@@ -69,16 +77,40 @@ const OurBusiness = () => {
   // Display Functions
   // ====================
   const displayInfoCards = () => {
-    return allCardInfo.map((cardInfo, i) => {
-      return (
-        <InfoCard
-          key={`${cardInfo.headerFirst} ${i} ${cardInfo.headerSecond}`}
-          headerFirst={cardInfo.headerFirst}
-          headerSecond={cardInfo.headerSecond}
-          mainSection={cardInfo.mainSection}
-        />
-      );
+    const allCardInfoElements = allCardInfo.map((cardInfo, i) => {
+      if (width > 1000) {
+        return (
+          <InfoCard
+            key={`${cardInfo.headerFirst} ${i} ${cardInfo.headerSecond}`}
+            headerFirst={cardInfo.headerFirst}
+            headerSecond={cardInfo.headerSecond}
+            mainSection={cardInfo.mainSection}
+          />
+        );
+      } else {
+        return (
+          <span
+            key={`${cardInfo.headerFirst} ${i} ${cardInfo.headerSecond}`}
+            className="our-business__info-text-wrapper"
+          >
+            <p className="our-business__info-header">
+              {`${cardInfo.headerFirst} ${cardInfo.headerSecond}`}
+            </p>
+            <p className="our-business__info-text">{cardInfo.mainSection}</p>
+          </span>
+        );
+      }
     });
+
+    if (width > 1000) {
+      return (
+        <div className="our-business__info-cards-wrapper">
+          {allCardInfoElements}
+        </div>
+      );
+    } else {
+      return allCardInfoElements;
+    }
   };
 
   // ====================
@@ -93,7 +125,11 @@ const OurBusiness = () => {
       })}
     >
       <div>
-        <div className="our-business__main-wrapper">
+        <div
+          className={classNames({
+            'our-business__main-wrapper': width > 1000,
+          })}
+        >
           <div className="our-business__main">
             <h1>OUR BUSINESS</h1>
 
@@ -161,9 +197,8 @@ const OurBusiness = () => {
 
         <div className="our-business__values-wrapper">
           <h1>OUR VALUES</h1>
-          <div className="our-business__info-cards-wrapper">
-            {displayInfoCards()}
-          </div>
+
+          {displayInfoCards()}
         </div>
       </div>
     </div>

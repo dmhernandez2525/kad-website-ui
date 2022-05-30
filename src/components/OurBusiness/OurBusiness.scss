@@ -94,3 +94,62 @@
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .our-business {
+    padding: 0px;
+
+    &__main {
+      h1 {
+        font-size: 23px;
+      }
+    }
+
+    &__text {
+      width: 90vw;
+
+      font-size: 14px;
+    }
+
+    &__values-wrapper {
+      margin-bottom: 50px;
+      margin-top: 31px;
+
+      h1 {
+        font-size: 23px;
+      }
+    }
+
+    &__info-header {
+      text-align: initial;
+
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    &__info-text-wrapper {
+      margin-left: 10vw;
+      margin-right: 5vw;
+    }
+
+    &__info-text {
+      margin-bottom: 0px;
+      text-align: initial;
+
+      font-size: 12px;
+    }
+
+    &__all-image-icon-wrapper {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 80%;
+      padding: 0;
+      padding-top: 50px;
+    }
+
+    &__image-icon-wrapper {
+      width: 114px;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 // Outside packages
-import react, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import classnames from 'classnames';
 
@@ -9,6 +9,7 @@ import ContactUsForm from '../ContactUs/ContactUsForm';
 
 // Hooks
 import useScrollToTop from '../../hooks/useScrollToTop';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 // Helpers
 import scrollById from '../../helpers/scrollById';
@@ -30,6 +31,8 @@ const Nav = () => {
   useScrollToTop();
 
   const location = useLocation();
+  const { width } = useWindowDimensions();
+
   // ====================
   // State
   // ====================
@@ -68,6 +71,7 @@ const Nav = () => {
   // ====================
   // Handle Methods
   // ====================
+
   // ====================
   // Display Functions
   // ====================
@@ -90,7 +94,7 @@ const Nav = () => {
         onClick={() => scrollById('home')}
       />
 
-      {!shouldNotShow && (
+      {width > 1000 && !shouldNotShow && (
         <>
           <a onClick={() => scrollById('home')}>HOME</a>
           <a onClick={() => scrollById('ourbusiness')}>OUR BUSINESS</a>
@@ -100,7 +104,7 @@ const Nav = () => {
           <Modal buttonText="CONTACT" children={<ContactUsForm />}></Modal>
         </>
       )}
-      {shouldNotShow && (
+      {width > 1000 && shouldNotShow && (
         <>
           <Link to="/#home">HOME</Link>
           <Link to="/#ourbusiness">OUR BUSINESS</Link>
