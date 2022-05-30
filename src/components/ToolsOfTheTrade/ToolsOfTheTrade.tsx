@@ -94,7 +94,7 @@ const ToolsOfTheTrade = () => {
         <div className="tools-of-the-trade__text-header-wrapper tools-of-the-trade__neg-marg">
           <div className="tools-of-the-trade__text-image-wrapper">
             <img
-              className="tools-of-the-trade__text-image"
+              className="tools-of-the-trade__text-image tools-of-the-trade__platforms-text-image"
               src={platforms}
               alt="two"
             />

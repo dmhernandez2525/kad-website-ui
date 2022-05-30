@@ -149,11 +149,14 @@ const OurBusiness = () => {
                     src={Laptop}
                     alt="Laptop"
                   />
-                  <img
-                    className="our-business__mobile-image-icon"
-                    src={Mobile}
-                    alt="Mobile"
-                  />
+
+                  {width < 1000 && (
+                    <img
+                      className="our-business__mobile-image-icon"
+                      src={Mobile}
+                      alt="Mobile"
+                    />
+                  )}
                 </div>
 
                 <p> Full-stack web and mobile experiences</p>
