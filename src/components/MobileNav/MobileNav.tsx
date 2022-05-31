@@ -56,16 +56,18 @@ const MobileNav = () => {
   return (
     <div className="mobile-navbar">
       <div className="mobile-navbar__button-wrapper">
-        <button
+        <div
           onClick={() => setOpen(!open)}
           className={classnames({
-            'mobile-navbar__button': true,
-            'mobile-navbar__button-closed': !open,
-            'mobile-navbar__button-open': open,
+            'mobile-navbar__hamburger': true,
+            'mobile-navbar__is-active': open,
           })}
+          id="hamburger"
         >
-          X
-        </button>
+          <span className="mobile-navbar__line"></span>
+          <span className="mobile-navbar__line"></span>
+          <span className="mobile-navbar__line"></span>
+        </div>
       </div>
 
       <div
