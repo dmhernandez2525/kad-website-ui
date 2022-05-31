@@ -1,5 +1,6 @@
 // Outside packages
-import React, { useState, useRef } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 
 // Hooks
@@ -12,16 +13,27 @@ const ContactUsForm = () => {
   // ====================
   // State
   // ====================
-  const [name, setName] = useState<string>();
-  const [email, setEmail] = useState<string>();
-  const [subject, setSubject] = useState<string>();
-  const [message, setMessage] = useState<string>();
+  const [badSend, setBadSend] = useState(false);
+  const [goodSend, setGoodSend] = useState(false);
 
   // ====================
   // Hooks
   // ====================
   const { width } = useWindowDimensions();
-
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    reValidateMode: 'onSubmit',
+    defaultValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
+  });
   // ====================
   // Variables
   // ====================
@@ -34,9 +46,19 @@ const ContactUsForm = () => {
   // ====================
   // Handle Methods
   // ====================
-  const handleSendEmail = (e: any) => {
-    e.preventDefault();
+  const handleBadSend = () => {
+    setGoodSend(false);
+    setBadSend(true);
+    setTimeout(() => setBadSend(false), 5000);
+  };
 
+  const handleGoodSend = () => {
+    setBadSend(false);
+    setGoodSend(true);
+    setTimeout(() => setGoodSend(false), 5000);
+  };
+
+  const handleSendEmail = (data: any) => {
     emailjs
       .sendForm(
         'service_7sy4d2s',
@@ -46,23 +68,35 @@ const ContactUsForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          reset();
+          handleGoodSend();
         },
         (error) => {
-          console.log(error.text);
+          handleBadSend();
         }
       );
-
-    setName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
   };
 
   // ====================
   // Display Functions
   // ====================
+  const displayFormMessage = () => {
+    if (badSend) {
+      return (
+        <span className="contact-us__form-error-message">
+          There was an error with submitting this form please try again.
+        </span>
+      );
+    } else if (goodSend) {
+      return (
+        <span className="contact-us__form-good-message">
+          Form successfully submitted!
+        </span>
+      );
+    }
+  };
 
+  const formMessage = useMemo(() => displayFormMessage(), [badSend, goodSend]);
   // ====================
   // Return
   // ====================
@@ -86,7 +120,10 @@ const ContactUsForm = () => {
 
         <div className="contact-us__form-wrapper">
           <h2>Get In Touch</h2>
-          <form ref={form} onSubmit={handleSendEmail}>
+
+          {formMessage}
+
+          <form ref={form} onSubmit={handleSubmit(handleSendEmail)}>
             <div className="contact-us__form">
               <div className="contact-us__form-item-wrapper">
                 <div className="contact-us__form-item">
@@ -95,24 +132,26 @@ const ContactUsForm = () => {
                     className="nameInput"
                     type="text"
                     id="Name"
-                    name="name"
-                    value={name}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                      setName(e.target.value)
-                    }
+                    {...register('name', { required: true })}
                   />
+                  {errors.name && (
+                    <span className="contact-us__form-error-message">
+                      This field is required
+                    </span>
+                  )}
                 </div>
                 <div className="contact-us__form-item">
                   <label html-for="Email">Email</label>
                   <input
                     type="text"
                     id="Email"
-                    name="email"
-                    value={email}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                      setEmail(e.target.value)
-                    }
+                    {...register('email', { required: true })}
                   />
+                  {errors.email && (
+                    <span className="contact-us__form-error-message">
+                      This field is required
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -121,12 +160,13 @@ const ContactUsForm = () => {
                 <input
                   type="text"
                   id="Subject"
-                  name="subject"
-                  value={subject}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSubject(e.target.value)
-                  }
+                  {...register('subject', { required: true })}
                 />
+                {errors.subject && (
+                  <span className="contact-us__form-error-message">
+                    This field is required
+                  </span>
+                )}
               </div>
 
               <div className="contact-us__form-item">
@@ -134,12 +174,13 @@ const ContactUsForm = () => {
                 <input
                   type="text"
                   id="Message"
-                  name="message"
-                  value={message}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setMessage(e.target.value)
-                  }
+                  {...register('message', { required: true })}
                 />
+                {errors.message && (
+                  <span className="contact-us__form-error-message">
+                    This field is required
+                  </span>
+                )}
               </div>
 
               <div className="contact-us__button-wrapper">
@@ -155,7 +196,7 @@ const ContactUsForm = () => {
       <div className="contact-us__main-form-wrapper">
         <div className="contact-us__form-wrapper">
           <h2>Contact Us</h2>
-
+          {formMessage}
           <div className="contact-us__header-info-wrapper">
             <span>KAD Consulting, LLC</span>
 
@@ -172,7 +213,7 @@ const ContactUsForm = () => {
             </div>
           </div>
 
-          <form ref={form} onSubmit={handleSendEmail}>
+          <form ref={form} onSubmit={handleSubmit(handleSendEmail)}>
             <div className="contact-us__form">
               <div className="contact-us__form-item-wrapper">
                 <div className="contact-us__form-item">
@@ -181,24 +222,26 @@ const ContactUsForm = () => {
                     className="nameInput"
                     type="text"
                     id="Name"
-                    name="name"
-                    value={name}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                      setName(e.target.value)
-                    }
+                    {...register('name', { required: true })}
                   />
+                  {errors.name && (
+                    <span className="contact-us__form-error-message">
+                      This field is required
+                    </span>
+                  )}
                 </div>
                 <div className="contact-us__form-item">
                   <label html-for="Email">Email</label>
                   <input
                     type="text"
                     id="Email"
-                    name="email"
-                    value={email}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                      setEmail(e.target.value)
-                    }
+                    {...register('email', { required: true })}
                   />
+                  {errors.email && (
+                    <span className="contact-us__form-error-message">
+                      This field is required
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -207,12 +250,13 @@ const ContactUsForm = () => {
                 <input
                   type="text"
                   id="Subject"
-                  name="subject"
-                  value={subject}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSubject(e.target.value)
-                  }
+                  {...register('subject', { required: true })}
                 />
+                {errors.subject && (
+                  <span className="contact-us__form-error-message">
+                    This field is required
+                  </span>
+                )}
               </div>
 
               <div className="contact-us__form-item">
@@ -220,12 +264,13 @@ const ContactUsForm = () => {
                 <input
                   type="text"
                   id="Message"
-                  name="message"
-                  value={message}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setMessage(e.target.value)
-                  }
+                  {...register('message', { required: true })}
                 />
+                {errors.message && (
+                  <span className="contact-us__form-error-message">
+                    This field is required
+                  </span>
+                )}
               </div>
 
               <div className="contact-us__button-wrapper">
