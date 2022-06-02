@@ -14,22 +14,6 @@
   &__open {
     display: block;
   }
-
-  &__button {
-    width: 150px;
-    padding: 8px;
-
-    border-radius: 27px;
-    color: #f7f7f7;
-    font-size: 17px;
-    background-color: #2a83e9;
-    border: 0px;
-  }
-
-  &__button:hover {
-    background-color: #f7f7f7;
-    color: #2a83e9;
-  }
 }
 
 /* Modal Content/Box */

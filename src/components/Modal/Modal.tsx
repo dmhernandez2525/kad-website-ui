@@ -1,5 +1,9 @@
+// Outside packages
 import React, { useState } from 'react';
 import classnames from 'classnames';
+
+// Components
+import Button from '../Button';
 
 // Styles
 import './Modal.scss';
@@ -46,9 +50,7 @@ const Modal = ({ children, buttonText }: any) => {
 
   return (
     <div>
-      <button className="modal__button" onClick={handleOpen} id="myBtn">
-        {buttonText}
-      </button>
+      <Button size="small" onclick={handleOpen} id="myBtn" text={buttonText} />
 
       <div
         id="myModal"

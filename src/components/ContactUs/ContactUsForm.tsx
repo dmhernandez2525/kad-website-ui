@@ -3,6 +3,9 @@ import React, { useMemo, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 
+// Components
+import Button from '../Button';
+
 // Hooks
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
@@ -184,7 +187,11 @@ const ContactUsForm = () => {
               </div>
 
               <div className="contact-us__button-wrapper">
-                <button className="contact-us__button">Submit</button>
+                <Button
+                  classname="contact-us__button"
+                  text="Submit"
+                  size="large"
+                />
               </div>
             </div>
           </form>
@@ -274,7 +281,11 @@ const ContactUsForm = () => {
               </div>
 
               <div className="contact-us__button-wrapper">
-                <button className="contact-us__button">Submit</button>
+                <Button
+                  classname="contact-us__button"
+                  text="Submit"
+                  size="large"
+                />
               </div>
             </div>
           </form>

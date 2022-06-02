@@ -1,8 +1,10 @@
 // Outside packages
 import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
+
 // Components
 import ContactUsForm from './ContactUsForm';
+import Button from '../Button';
 // Images
 import Logo from '../../images/kadLogoBlack.svg';
 
@@ -44,7 +46,7 @@ const ContactUs = ({ hasFooter }: any) => {
             up against the biggest companies out there.
           </p>
           <div>
-            <button className="contact-us__button">Quiz</button>
+            <Button size="large" classname="contact-us__button" text="Quiz" />
           </div>
 
           <footer>
