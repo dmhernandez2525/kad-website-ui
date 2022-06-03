@@ -12,6 +12,16 @@
     color: #2a83e9;
   }
 
+  &__sec {
+    background-color: #d1d0c9;
+    color: black;
+  }
+
+  &__sec:hover {
+    background-color: #364655;
+    color: white;
+  }
+
   &__small {
     width: 150px;
   }

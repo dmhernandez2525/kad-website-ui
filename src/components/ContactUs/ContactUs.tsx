@@ -46,7 +46,12 @@ const ContactUs = ({ hasFooter }: any) => {
             up against the biggest companies out there.
           </p>
           <div>
-            <Button size="large" classname="contact-us__button" text="Quiz" />
+            <Button
+              type="secondary"
+              size="large"
+              classname="contact-us__button"
+              text="Quiz"
+            />
           </div>
 
           <footer>

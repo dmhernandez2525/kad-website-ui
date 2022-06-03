@@ -8,7 +8,15 @@ import Button from '../Button';
 // Styles
 import './Modal.scss';
 
-const Modal = ({ children, buttonText }: any) => {
+// Interfaces
+
+interface IModalProps {
+  children: any;
+  buttonText: string;
+  // TODO: remove this when button is removed
+  bellow?: boolean;
+}
+const Modal = ({ children, buttonText, bellow }: any) => {
   // Get the modal
   var modal: any = document.getElementById('myModal');
 
@@ -26,6 +34,8 @@ const Modal = ({ children, buttonText }: any) => {
   // ====================
   // Variables
   // ====================
+
+  const type = !bellow ? 'primary' : 'secondary';
 
   // ====================
   // Handle Methods
@@ -50,7 +60,13 @@ const Modal = ({ children, buttonText }: any) => {
 
   return (
     <div>
-      <Button size="small" onclick={handleOpen} id="myBtn" text={buttonText} />
+      <Button
+        type={type}
+        size="small"
+        onclick={handleOpen}
+        id="myBtn"
+        text={buttonText}
+      />
 
       <div
         id="myModal"

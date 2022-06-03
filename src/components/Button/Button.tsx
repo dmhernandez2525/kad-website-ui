@@ -12,12 +12,13 @@ interface IButtonProps {
   size: 'small' | 'medium' | 'large';
   id?: string;
   classname?: string;
+  type?: 'primary' | 'secondary';
 }
 
 // ====================
 // Component
 // ====================
-const Button = ({ text, id, onclick, classname, size }: IButtonProps) => {
+const Button = ({ text, id, onclick, classname, size, type }: IButtonProps) => {
   // ====================
   // Custom Hooks
   // ====================
@@ -54,6 +55,7 @@ const Button = ({ text, id, onclick, classname, size }: IButtonProps) => {
         button__small: size === 'small',
         button__medium: size === 'medium',
         button__large: size === 'large',
+        button__sec: type === 'secondary',
       })}
       onClick={onclick}
       id={id}

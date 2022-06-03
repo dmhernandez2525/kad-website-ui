@@ -101,7 +101,11 @@ const Nav = () => {
           <a onClick={() => scrollById('whatwedo')}>WHAT WE DO</a>
           <a onClick={() => scrollById('process')}>OUR PROCESS</a>
           <Link to="/ourstory">OUR STORY</Link>
-          <Modal buttonText="CONTACT" children={<ContactUsForm />}></Modal>
+          <Modal
+            bellow={bellow}
+            buttonText="CONTACT"
+            children={<ContactUsForm />}
+          ></Modal>
         </>
       )}
       {width > 1000 && shouldNotShow && (
