@@ -37,6 +37,7 @@ const Nav = () => {
   // State
   // ====================
   const [bellow, setBellow] = useState(false);
+  const [currentNavItem, setCurrentNavItem] = useState('');
 
   // ====================
   // Variables
@@ -64,13 +65,42 @@ const Nav = () => {
   // ====================
   useEffect(() => {
     if (location.pathname !== '/ourstory') {
-      scrollById(location.hash.slice(1));
+      const idToScroll = location.hash.slice(1);
+      scrollById(idToScroll);
+      const indexing: any = {
+        home: 0,
+        ourbusiness: 1,
+        whatwedo: 2,
+        process: 3,
+      };
+      handleUnderlineMove(indexing[idToScroll]);
+      setCurrentNavItem(idToScroll);
+    } else {
+      handleUnderlineMove(4);
     }
-  }, [location]);
+  }, [location, width]);
 
   // ====================
   // Handle Methods
   // ====================
+  const handleUnderlineMove = (index: number) => {
+    // TODO refactor to use useRef
+    let underlines: NodeListOf<HTMLElement> =
+      document.querySelectorAll('.navbar__link');
+    let currentNavItem: HTMLElement = underlines[index];
+    let navUnderline: HTMLElement | null =
+      document.getElementById('navbarIndicator');
+
+    if (navUnderline) {
+      let width = 0;
+      for (let i = 0; i < index; i++) {
+        width += underlines[i].offsetWidth;
+      }
+
+      navUnderline.style.width = `${currentNavItem.offsetWidth}px`;
+      navUnderline.style.transform = 'translate3d(' + width + 'px,0,0)';
+    }
+  };
 
   // ====================
   // Display Functions
@@ -95,29 +125,125 @@ const Nav = () => {
       />
 
       {width > 1000 && !shouldNotShow && (
-        <>
-          <a onClick={() => scrollById('home')}>HOME</a>
-          <a onClick={() => scrollById('ourbusiness')}>OUR BUSINESS</a>
-          <a onClick={() => scrollById('whatwedo')}>WHAT WE DO</a>
-          <a onClick={() => scrollById('process')}>OUR PROCESS</a>
-          <Link to="/ourstory">OUR STORY</Link>
+        <div className="navbar__link-wrapper">
+          <a
+            className={classnames({
+              navbar__link: true,
+              'navbar__link--active': currentNavItem === 'home',
+            })}
+            onClick={() => {
+              handleUnderlineMove(0);
+              scrollById('home');
+              setCurrentNavItem('home');
+            }}
+          >
+            HOME
+          </a>
+          <a
+            className={classnames({
+              navbar__link: true,
+              'navbar__link--active': currentNavItem === 'ourbusiness',
+            })}
+            onClick={() => {
+              handleUnderlineMove(1);
+              scrollById('ourbusiness');
+              setCurrentNavItem('ourbusiness');
+            }}
+          >
+            OUR BUSINESS
+          </a>
+          <a
+            className={classnames({
+              navbar__link: true,
+              'navbar__link--active': currentNavItem === 'whatwedo',
+            })}
+            onClick={() => {
+              handleUnderlineMove(2);
+              scrollById('whatwedo');
+              setCurrentNavItem('whatwedo');
+            }}
+          >
+            WHAT WE DO
+          </a>
+          <a
+            className={classnames({
+              navbar__link: true,
+              'navbar__link--active': currentNavItem === 'process',
+            })}
+            onClick={() => {
+              handleUnderlineMove(3);
+              scrollById('process');
+              setCurrentNavItem('process');
+            }}
+          >
+            OUR PROCESS
+          </a>
+          <Link
+            onClick={() => handleUnderlineMove(4)}
+            className={classnames({
+              navbar__link: true,
+              'navbar__link--active': currentNavItem === '',
+            })}
+            to="/ourstory"
+          >
+            OUR STORY
+          </Link>
+          <div id="navbarIndicator" className="navbar__indicator"></div>
           <Modal
             bellow={bellow}
             buttonText="CONTACT"
             children={<ContactUsForm />}
           ></Modal>
-        </>
+        </div>
       )}
       {width > 1000 && shouldNotShow && (
-        <>
-          <Link to="/#home">HOME</Link>
-          <Link to="/#ourbusiness">OUR BUSINESS</Link>
-          <Link to="/#whatwedo">WHAT WE DO</Link>
-          <Link to="/#process">OUR PROCESS</Link>
-          <Link to="/ourstory">OUR STORY</Link>
+        <div className="navbar__link-wrapper">
+          <Link
+            className={classnames({
+              navbar__link: true,
+            })}
+            to="/#home"
+          >
+            HOME
+          </Link>
+          <Link
+            className={classnames({
+              navbar__link: true,
+            })}
+            to="/#ourbusiness"
+          >
+            OUR BUSINESS
+          </Link>
+          <Link
+            className={classnames({
+              navbar__link: true,
+            })}
+            to="/#whatwedo"
+          >
+            WHAT WE DO
+          </Link>
+          <Link
+            className={classnames({
+              navbar__link: true,
+            })}
+            to="/#process"
+          >
+            OUR PROCESS
+          </Link>
+          <Link
+            className={classnames({
+              navbar__link: true,
+              'navbar__link--active': shouldNotShow,
+            })}
+            onClick={() => handleUnderlineMove(4)}
+            to="/ourstory"
+          >
+            OUR STORY
+          </Link>
+          <span id="navbarIndicator" className="navbar__indicator"></span>
 
           <Modal buttonText="CONTACT" children={<ContactUsForm />}></Modal>
-        </>
+        </div>
       )}
     </div>
   );
