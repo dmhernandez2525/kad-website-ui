@@ -117,12 +117,17 @@ const Nav = () => {
         navbar__scroll: bellow || shouldNotShow,
       })}
     >
-      <img
-        className="navbar__logo"
-        src={!bellow && !shouldNotShow ? LogoWhite : LogoBlack}
-        alt="kad logo"
-        onClick={() => scrollById('home')}
-      />
+      <Link to="/#home">
+        <img
+          className="navbar__logo"
+          src={!bellow && !shouldNotShow ? LogoWhite : LogoBlack}
+          alt="kad logo"
+          onClick={() => {
+            scrollById('home');
+            setCurrentNavItem('home');
+          }}
+        />
+      </Link>
 
       {width > 1000 && !shouldNotShow && (
         <div className="navbar__link-wrapper">
