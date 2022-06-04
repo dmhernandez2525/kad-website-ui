@@ -91,7 +91,7 @@ const Nav = () => {
     let navUnderline: HTMLElement | null =
       document.getElementById('navbarIndicator');
 
-    if (navUnderline) {
+    if (navUnderline && currentNavItem) {
       let width = 0;
       for (let i = 0; i < index; i++) {
         width += underlines[i].offsetWidth;
