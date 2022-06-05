@@ -41,7 +41,7 @@ const ContactUs = ({ hasFooter }: any) => {
       <ContactUsForm />
       {hasFooter && (
         <>
-          <p>
+          {/* <p>
             Take our FREE technology health assessment now to see how you stack
             up against the biggest companies out there.
           </p>
@@ -52,7 +52,7 @@ const ContactUs = ({ hasFooter }: any) => {
               classname="contact-us__button"
               text="Quiz"
             />
-          </div>
+          </div> */}
 
           <footer>
             <img className="contact-us__logo" src={Logo} alt="kad logo" />
