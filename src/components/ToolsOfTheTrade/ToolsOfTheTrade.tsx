@@ -7,6 +7,12 @@ import React from 'react';
 import languages from '../../images/ToolsofTheTrade/languages.png';
 import platforms from '../../images/ToolsofTheTrade/platforms.png';
 import toolsandframeworks from '../../images/ToolsofTheTrade/toolsandframeworks.png';
+import smallLanguages from '../../images/ToolsofTheTrade/smallLanguages.png';
+import smallPlatforms from '../../images/ToolsofTheTrade/smallPlatforms.png';
+import smallToolsandframeworks from '../../images/ToolsofTheTrade/smallToolsandframeworks.png';
+
+// Hooks
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 // Styles
 import './ToolsOfTheTrade.scss';
@@ -19,6 +25,11 @@ const ToolsOfTheTrade = () => {
   // ====================
   // Variables
   // ====================
+
+  // ====================
+  // Hooks
+  // ====================
+  const { width } = useWindowDimensions();
 
   // ====================
   // State
@@ -55,7 +66,7 @@ const ToolsOfTheTrade = () => {
           <div className="tools-of-the-trade__text-image-wrapper">
             <img
               className="tools-of-the-trade__text-image"
-              src={languages}
+              src={width > 390 ? languages : smallLanguages}
               alt="one"
             />
 
@@ -89,7 +100,7 @@ const ToolsOfTheTrade = () => {
 
             <img
               className="tools-of-the-trade__text-image"
-              src={toolsandframeworks}
+              src={width > 390 ? toolsandframeworks : smallToolsandframeworks}
               alt="three"
             />
           </div>
@@ -98,7 +109,7 @@ const ToolsOfTheTrade = () => {
           <div className="tools-of-the-trade__text-image-wrapper">
             <img
               className="tools-of-the-trade__text-image tools-of-the-trade__platforms-text-image"
-              src={platforms}
+              src={width > 390 ? platforms : smallPlatforms}
               alt="two"
             />
             <div className="tools-of-the-trade__text-image-main-wrapper tools-of-the-trade__platforms">
