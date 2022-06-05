@@ -124,7 +124,7 @@
 
 @media screen and (max-width: 1000px) {
   .our-process {
-    background-attachment: scroll;
+    // background-attachment: scroll;
     &__wrapper {
       padding: 0px 15px 48px 15px;
 
@@ -234,6 +234,8 @@
 
 @media screen and (max-width: 390px) {
   .our-process {
+    background: url('https://kad-website.s3.us-west-1.amazonaws.com/smallWhiteBackground.png');
+
     &__content-item-process-text-wrapper > span {
       font-size: 20px;
     }
