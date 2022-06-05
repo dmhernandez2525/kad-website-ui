@@ -12,7 +12,6 @@ import Gear from '../../images/OurBusiness/Gear.svg';
 import Graph from '../../images/OurBusiness/Graph.svg';
 import Hierarchy from '../../images/OurBusiness/Hierarchy.svg';
 import Laptop from '../../images/OurBusiness/Laptop.svg';
-import Mobile from '../../images/OurBusiness/Mobile.svg';
 import OfficeBag from '../../images/OurBusiness/OfficeBag.svg';
 
 // Styles
@@ -143,21 +142,11 @@ const OurBusiness = () => {
 
             <div className="our-business__all-image-icon-wrapper">
               <div className="our-business__image-icon-wrapper">
-                <div className="our-business__laptop-mobile-image-icon-wrapper">
-                  <img
-                    className="our-business__laptop-image-icon"
-                    src={Laptop}
-                    alt="Laptop"
-                  />
-
-                  {width < 1000 && (
-                    <img
-                      className="our-business__mobile-image-icon"
-                      src={Mobile}
-                      alt="Mobile"
-                    />
-                  )}
-                </div>
+                <img
+                  className="our-business__image-icon"
+                  src={Laptop}
+                  alt="Laptop"
+                />
 
                 <p> Full-stack web and mobile experiences</p>
               </div>
