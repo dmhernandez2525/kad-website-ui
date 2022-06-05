@@ -131,6 +131,7 @@ const Nav = () => {
 
       {width > 1000 && !shouldNotShow && (
         <div className="navbar__link-wrapper">
+          {/* TODO: change a tags to buttons so hrefs are not needed */}
           <a
             className={classnames({
               navbar__link: true,

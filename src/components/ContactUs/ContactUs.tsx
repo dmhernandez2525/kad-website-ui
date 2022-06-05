@@ -1,10 +1,9 @@
 // Outside packages
-import React, { useState, useRef } from 'react';
-import emailjs from 'emailjs-com';
+import React from 'react';
 
 // Components
 import ContactUsForm from './ContactUsForm';
-import Button from '../Button';
+
 // Images
 import Logo from '../../images/kadLogoBlack.svg';
 
