@@ -37,7 +37,7 @@ const Nav = () => {
   // State
   // ====================
   const [bellow, setBellow] = useState(false);
-  const [currentNavItem, setCurrentNavItem] = useState('');
+  const [currentNavItem, setCurrentNavItem] = useState('home');
 
   // ====================
   // Variables
@@ -73,8 +73,13 @@ const Nav = () => {
         whatwedo: 2,
         process: 3,
       };
-      handleUnderlineMove(indexing[idToScroll]);
-      setCurrentNavItem(idToScroll);
+      if (idToScroll === '') {
+        handleUnderlineMove(0);
+        setCurrentNavItem('home');
+      } else {
+        handleUnderlineMove(indexing[idToScroll]);
+        setCurrentNavItem(idToScroll);
+      }
     } else {
       handleUnderlineMove(4);
     }

@@ -79,8 +79,7 @@ const ToolsOfTheTrade = () => {
                 Whatever the project requires, we speak its language. With
                 expertise in a wide variety of cutting-edge and
                 industry-established programming languages, we ensure that we
-                can build a tailor-made platform tailored to your unique
-                situation.
+                can build a platform tailored to your unique situation.
               </p>
             </div>
           </div>
