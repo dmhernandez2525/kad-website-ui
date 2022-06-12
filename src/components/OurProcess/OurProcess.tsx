@@ -104,25 +104,15 @@ const OurProcess = () => {
           </p>
         </div>
       );
-      if (width < 1000) {
-        all.push(ele);
-      } else if (i % 2 === 0) {
+      all.push(ele);
+      if (i % 2 === 0) {
         right.push(ele);
       } else if (i % 2 === 1) {
         left.push(ele);
       }
     });
     if (width > 1000) {
-      return (
-        <div className="our-process__all-content-item-wrapper">
-          <div className="our-process__all-content-item our-process__content-item-right">
-            {right}
-          </div>
-          <div className="our-process__all-content-item our-process__content-item-left">
-            {left}
-          </div>
-        </div>
-      );
+      return <div className="our-process__all-content-item-wrapper">{all}</div>;
     } else {
       return <div className="our-process__all-content-item-wrapper">{all}</div>;
     }
