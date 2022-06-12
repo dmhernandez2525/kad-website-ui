@@ -30,9 +30,8 @@
     height: fit-content;
 
     text-align: center;
-    color: white !important;
 
-    &:hover {
+    :hover {
       color: white !important;
     }
     p {
@@ -48,9 +47,13 @@
 
     background-color: #364655;
     text-align: left;
+    color: white !important;
 
+    :hover {
+      color: white !important;
+    }
     a {
-      color: white;
+      color: white !important;
       text-decoration-line: none;
     }
   }
@@ -65,7 +68,7 @@
 
     color: white !important;
 
-    &:hover {
+    :hover {
       color: white !important;
     }
     h2 {
