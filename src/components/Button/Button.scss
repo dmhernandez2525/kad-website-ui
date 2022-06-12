@@ -45,6 +45,23 @@
     background-size: 100%;
     transition: background 0s;
   }
+  &__third {
+    background-color: red;
+    color: white;
+  }
+
+  &__third:hover {
+    background-color: #d1d0c9;
+    color: black !important;
+    background: #d1d0c9 radial-gradient(circle, transparent 1%, #d1d0c9 1%)
+      center/15000%;
+  }
+
+  &__third:active {
+    background-color: #364655;
+    background-size: 100%;
+    transition: background 0s;
+  }
 
   &__small {
     width: 150px;

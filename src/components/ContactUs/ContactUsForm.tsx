@@ -28,6 +28,7 @@ const ContactUsForm = () => {
     handleSubmit,
     formState: { errors },
     reset,
+    clearErrors,
   } = useForm({
     reValidateMode: 'onSubmit',
     defaultValues: {
@@ -59,6 +60,11 @@ const ContactUsForm = () => {
     setBadSend(false);
     setGoodSend(true);
     setTimeout(() => setGoodSend(false), 5000);
+  };
+
+  const handleClearForm = () => {
+    reset();
+    clearErrors();
   };
 
   const handleSendEmail = (data: any) => {
@@ -188,9 +194,16 @@ const ContactUsForm = () => {
 
               <div className="contact-us__button-wrapper">
                 <Button
-                  classname="contact-us__button"
+                  classname="contact-us__button-submit"
                   text="Submit"
                   size="large"
+                />
+                <Button
+                  classname="contact-us__button-clear"
+                  text="Clear"
+                  size="large"
+                  type="tertiary"
+                  onclick={() => handleClearForm()}
                 />
               </div>
             </div>
@@ -282,9 +295,16 @@ const ContactUsForm = () => {
 
               <div className="contact-us__button-wrapper">
                 <Button
-                  classname="contact-us__button"
+                  classname="contact-us__button-submit"
                   text="Submit"
                   size="large"
+                />
+                <Button
+                  classname="contact-us__button-clear"
+                  text="Clear"
+                  size="large"
+                  type="tertiary"
+                  onclick={() => handleClearForm()}
                 />
               </div>
             </div>

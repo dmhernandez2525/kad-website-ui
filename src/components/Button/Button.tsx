@@ -12,7 +12,7 @@ interface IButtonProps {
   size: 'small' | 'medium' | 'large';
   id?: string;
   classname?: string;
-  type?: 'primary' | 'secondary';
+  type?: 'primary' | 'secondary' | 'tertiary';
 }
 
 // ====================
@@ -56,6 +56,7 @@ const Button = ({ text, id, onclick, classname, size, type }: IButtonProps) => {
         button__medium: size === 'medium',
         button__large: size === 'large',
         button__sec: type === 'secondary',
+        button__third: type === 'tertiary',
       })}
       onClick={onclick}
       id={id}
