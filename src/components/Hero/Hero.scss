@@ -44,6 +44,7 @@
   .hero {
     height: 286px;
     background-size: 868px;
+    background-attachment: unset;
 
     &__text-top {
       font-size: 14px;
