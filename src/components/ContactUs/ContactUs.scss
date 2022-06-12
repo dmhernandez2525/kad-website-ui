@@ -30,8 +30,11 @@
     height: fit-content;
 
     text-align: center;
-    color: white;
+    color: white !important;
 
+    &:hover {
+      color: white !important;
+    }
     p {
       width: 434px;
     }
@@ -60,6 +63,11 @@
 
     background-color: #364655;
 
+    color: white !important;
+
+    &:hover {
+      color: white !important;
+    }
     h2 {
       margin-top: inherit;
 
