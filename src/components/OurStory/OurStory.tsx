@@ -76,11 +76,11 @@ const OurStory = () => {
         <h1> Our founders</h1>
         <div className="our-story__our-founders-image-wrapper">
           <img
-            src="https://kad-website.s3.us-west-1.amazonaws.com/NewDanielPic.jpeg"
+            src="https://kad-website-ui-images.s3.amazonaws.com/NewDanielPic.jpeg"
             alt="daniel hernandez"
           />
           <img
-            src="https://kad-website.s3.us-west-1.amazonaws.com/Keegan.jpeg"
+            src="https://kad-website-ui-images.s3.amazonaws.com/Keegan.jpeg"
             alt="Keegan Lamar"
           />
         </div>
