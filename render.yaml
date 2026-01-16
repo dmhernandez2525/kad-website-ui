@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: kad-website-ui
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    pullRequestPreviewsEnabled: true
+    envVars:
+      - key: NODE_VERSION
+        value: 18
