@@ -7,6 +7,7 @@ import OurBusiness from './OurBusiness';
 import ToolsOfTheTrade from './ToolsOfTheTrade';
 import ContactUs from './ContactUs';
 import MobileNav from './MobileNav';
+import BottomNav from './BottomNav';
 // TODO: move OurStory to pages
 
 export {
@@ -19,4 +20,5 @@ export {
   ToolsOfTheTrade,
   ContactUs,
   MobileNav,
+  BottomNav,
 };
