@@ -36,6 +36,7 @@
     }
     p {
       width: 434px;
+      max-width: 100%;
     }
   }
 
@@ -145,11 +146,29 @@
     &__form-wrapper {
       width: 100%;
       margin-left: 0px;
+      padding: 16px;
+      box-sizing: border-box;
 
       h2 {
         font-size: 23px;
         text-align: center;
       }
+    }
+
+    &__form-item-wrapper {
+      flex-direction: column;
+    }
+
+    &__main-form-wrapper {
+      flex-direction: column;
+
+      p {
+        width: 100%;
+      }
+    }
+
+    &__main-form-contact-us {
+      padding: 16px;
     }
 
     &__header-info-wrapper {

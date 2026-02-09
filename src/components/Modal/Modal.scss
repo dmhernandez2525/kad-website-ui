@@ -23,8 +23,18 @@
   padding: 70px;
   border: 1px solid #888;
   width: 80%;
+  max-width: 100%;
+  box-sizing: border-box;
   margin-top: 10vh;
   position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 24px 16px;
+    margin-top: 5vh;
+  }
 }
 
 /* The Close Button */

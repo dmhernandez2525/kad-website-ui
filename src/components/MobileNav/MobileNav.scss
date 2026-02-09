@@ -101,3 +101,20 @@
   transform: translateY(-13px) rotate(-45deg);
   background-color: #ecf0f1;
 }
+
+@media screen and (max-width: 480px) {
+  .mobile-navbar {
+    &__open {
+      a {
+        margin-left: 32px;
+        font-size: 14px;
+      }
+    }
+
+    &__hamburger .mobile-navbar__line {
+      width: 40px;
+      height: 4px;
+      margin: 6px auto;
+    }
+  }
+}

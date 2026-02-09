@@ -43,7 +43,7 @@
 @media screen and (max-width: 1000px) {
   .hero {
     height: 286px;
-    background-size: 868px;
+    background-size: cover;
     background-attachment: unset;
 
     &__text-top {
@@ -57,6 +57,26 @@
 
     &__heading {
       font-size: 24px;
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    height: 240px;
+
+    &__text-top {
+      font-size: 12px;
+    }
+
+    &__text-bottom {
+      width: 180px;
+      font-size: 11px;
+    }
+
+    &__heading {
+      font-size: 18px;
     }
   }
 }
