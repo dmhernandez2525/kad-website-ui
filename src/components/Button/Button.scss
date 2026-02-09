@@ -72,6 +72,7 @@
 
   &__large {
     width: 260px;
+    max-width: 100%;
   }
 
   // &:after {
@@ -79,4 +80,17 @@
   //   background-size: 100%;
   //   transition: background 0s;
   // }
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    &__small {
+      width: 120px;
+    }
+
+    &__large {
+      width: 100%;
+      max-width: 260px;
+    }
+  }
 }
