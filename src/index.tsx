@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Components
 import App from './App';
-import { OurStory, Nav } from './components';
+import { OurStory, Nav, BottomNav } from './components';
 
 // Helpers
 import reportWebVitals from './reportWebVitals';
@@ -28,6 +28,7 @@ ReactDOM.render(
           }
         />
       </Routes>
+      <BottomNav />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
